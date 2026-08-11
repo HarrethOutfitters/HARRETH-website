@@ -551,7 +551,7 @@ footer > p {
 }
 
 .product-card {
-  background: #1b1b1b;
+  background: transparent;
 
   padding: 20px;
 
@@ -1084,8 +1084,7 @@ footer > p {
 /* DARK PRODUCT CARDS */
 
 .product-card {
-    background: #1b1b1b;
-    color: #ffffff;
+    background: transparent;
 }
 
 .product-card img {
