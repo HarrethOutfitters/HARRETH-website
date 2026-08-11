@@ -569,7 +569,7 @@ footer > p {
 
   object-fit: contain;
 
-  background: #202020;
+  background: transparent;
 }
 
 .product-card h3 {
@@ -1088,7 +1088,7 @@ footer > p {
 }
 
 .product-card img {
-    background: #202020;
+    background: transparent;
 }
 
 .product-card h3 {
