@@ -765,7 +765,7 @@ footer > p {
 }
 
 .product-page-image {
-  background: #1b1b1b;
+  background: transparent;
 
   min-height: 600px;
 
@@ -940,7 +940,7 @@ footer > p {
 }
 
 .product-page-image {
-  background: #1b1b1b;
+  background: transparent;
 
   min-height: 600px;
 
