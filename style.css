@@ -1080,3 +1080,22 @@ footer > p {
     min-height: 420px;
   }
 }
+
+/* DARK PRODUCT CARDS */
+
+.product-card {
+    background: #1b1b1b;
+    color: #ffffff;
+}
+
+.product-card img {
+    background: #202020;
+}
+
+.product-card h3 {
+    color: #ffffff;
+}
+
+.product-card p {
+    color: #a9a9a9;
+}
