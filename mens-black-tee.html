@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +11,107 @@
 </head>
 
 <body>
+
+    <!-- SNIPCART INSTALL -->
     <script>
-    window.SnipcartSettings = {
-        publicApiKey: 'YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3',
-        
-    };
+        window.SnipcartSettings = {
+            publicApiKey: 'YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3'
+        };
 
-    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-</script>
+        (() => {
+            var c, d;
+            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
 
+            var s, S;
+            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
+
+            var l, p;
+            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
+
+            var w, u;
+            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
+
+            var f =
+                window.SnipcartSettings.version.includes("v3.0.0-ci") ||
+                window.SnipcartSettings.version != "3.0" &&
+                window.SnipcartSettings.version.localeCompare(
+                    "3.4.0",
+                    void 0,
+                    { numeric: !0, sensitivity: "base" }
+                ) === -1;
+
+            var m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
+
+            window.LoadSnipcart = o;
+
+            document.readyState === "loading"
+                ? document.addEventListener("DOMContentLoaded", r)
+                : r();
+
+            function r() {
+                window.SnipcartSettings.loadStrategy
+                    ? window.SnipcartSettings.loadStrategy === "on-user-interaction" &&
+                      (
+                        m.forEach(t => document.addEventListener(t, o)),
+                        setTimeout(o, window.SnipcartSettings.timeoutDuration)
+                      )
+                    : o();
+            }
+
+            var a = !1;
+
+            function o() {
+                if (a) return;
+                a = !0;
+
+                let t = document.getElementsByTagName("head")[0],
+                    e = document.querySelector("#snipcart"),
+                    i = document.querySelector(
+                        `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
+                    ),
+                    n = document.querySelector(
+                        `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
+                    );
+
+                e || (
+                    e = document.createElement("div"),
+                    e.id = "snipcart",
+                    e.setAttribute("hidden", "true"),
+                    document.body.appendChild(e)
+                );
+
+                v(e);
+
+                i || (
+                    i = document.createElement("script"),
+                    i.src =
+                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,
+                    i.async = !0,
+                    t.appendChild(i)
+                );
+
+                n || (
+                    n = document.createElement("link"),
+                    n.rel = "stylesheet",
+                    n.type = "text/css",
+                    n.href =
+                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,
+                    t.prepend(n)
+                );
+
+                m.forEach(g => document.removeEventListener(g, o));
+            }
+
+            function v(t) {
+                !f || (
+                    t.dataset.apiKey = window.SnipcartSettings.publicApiKey
+                );
+            }
+        })();
+    </script>
+
+
+    <!-- HEADER -->
     <header class="site-header">
 
         <div class="logo">
@@ -43,6 +136,7 @@
     </header>
 
 
+    <!-- PRODUCT -->
     <main>
 
         <section class="product-page">
@@ -50,54 +144,107 @@
             <div class="product-page-grid">
 
                 <div class="product-page-image">
-                    <img src="images/shirtcol.png" alt="Harreth Men's Black Logo Tee">
+                    <img
+                        src="images/shirtcol.png"
+                        alt="Harreth Men's Black Logo Tee"
+                    >
                 </div>
+
 
                 <div class="product-page-info">
 
-                    <p class="product-eyebrow">HARRETH OUTFITTERS</p>
+                    <p class="product-eyebrow">
+                        HARRETH OUTFITTERS
+                    </p>
 
-                    <h1>HARRETH LOGO TEE</h1>
+                    <h1>
+                        HARRETH LOGO TEE
+                    </h1>
 
-                    <p class="product-color">Black</p>
+                    <p class="product-color">
+                        Black
+                    </p>
 
-                    <p class="product-price">$29.99</p>
+                    <p class="product-price">
+                        $29.99
+                    </p>
 
                     <p class="product-description">
                         Built for long days, weekends outside, and wherever the wild takes you.
                         A comfortable everyday tee with the Harreth mountain logo across the back.
                     </p>
 
+
+                    <!-- SIZE SELECTOR -->
                     <div class="product-option">
-    <label for="shirt-size">SIZE</label>
 
-    <select
-        id="shirt-size"
-        name="Size"
-        class="snipcart-item-custom-field"
-    >
-        <option value="">Select Size</option>
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-        <option value="XL">XL</option>
-        <option value="2XL">2XL</option>
-        <option value="3XL">3XL</option>
-    </select>
-</div>
+                        <label for="shirt-size">
+                            SIZE
+                        </label>
 
+                        <select id="shirt-size">
+
+                            <option value="">
+                                Select Size
+                            </option>
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                            <option value="XL">
+                                XL
+                            </option>
+
+                            <option value="2XL">
+                                2XL
+                            </option>
+
+                            <option value="3XL">
+                                3XL
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ADD TO CART -->
                     <button
-    class="add-cart-btn snipcart-add-item"
-    data-item-id="harreth-mens-black-logo-tee"
-    data-item-name="Harreth Logo Tee - Black"
-    data-item-price="29.99"
-    data-item-url="/mens-black-tee.html"
-    data-item-image="/images/shirtcol.png"
-    data-item-description="Harreth men's black logo tee. Built for long days, weekends outside, and wherever the wild takes you."
-    
->
-    ADD TO CART
-</button>
+                        id="black-tee-add"
+
+                        class="add-cart-btn snipcart-add-item"
+
+                        data-item-id="harreth-mens-black-logo-tee"
+
+                        data-item-name="Harreth Logo Tee - Black"
+
+                        data-item-price="29.99"
+
+                        data-item-url="/mens-black-tee.html"
+
+                        data-item-image="/images/shirtcol.png"
+
+                        data-item-description="Harreth men's black logo tee. Built for long days, weekends outside, and wherever the wild takes you."
+
+                        data-item-custom1-name="Size"
+
+                        data-item-custom1-options="Small|Medium|Large|XL|2XL|3XL"
+
+                        data-item-custom1-required="true"
+
+                        data-item-custom1-value=""
+                    >
+                        ADD TO CART
+                    </button>
 
                 </div>
 
@@ -108,6 +255,7 @@
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-brand">
@@ -115,9 +263,76 @@
             <p>BUILT FOR THE WILD.</p>
         </div>
 
-        <p>© 2026 HARRETH OUTFITTERS</p>
+        <p>
+            © 2026 HARRETH OUTFITTERS
+        </p>
 
     </footer>
 
+
+    <!-- SYNC SIZE TO SNIPCART -->
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const sizeSelect =
+                    document.getElementById("shirt-size");
+
+                const addButton =
+                    document.getElementById("black-tee-add");
+
+
+                function syncSize() {
+
+                    const selectedSize =
+                        sizeSelect.value;
+
+                    addButton.setAttribute(
+                        "data-item-custom1-value",
+                        selectedSize
+                    );
+
+                    return selectedSize;
+                }
+
+
+                sizeSelect.addEventListener(
+                    "change",
+                    syncSize
+                );
+
+
+                addButton.addEventListener(
+                    "click",
+                    function (event) {
+
+                        const selectedSize =
+                            syncSize();
+
+                        if (!selectedSize) {
+
+                            event.preventDefault();
+
+                            event.stopImmediatePropagation();
+
+                            alert(
+                                "Please select a size before adding this shirt to your cart."
+                            );
+
+                            sizeSelect.focus();
+                        }
+
+                    },
+                    true
+                );
+
+            }
+        );
+
+    </script>
+
 </body>
+
 </html>
