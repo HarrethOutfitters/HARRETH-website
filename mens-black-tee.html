@@ -184,10 +184,6 @@
 
                         <select id="shirt-size">
 
-                            <option value="">
-                                Select Size
-                            </option>
-
                             <option value="Small">
                                 Small
                             </option>
@@ -220,28 +216,19 @@
                     <!-- ADD TO CART -->
                     <button
                         id="black-tee-add"
-
                         class="add-cart-btn snipcart-add-item"
 
                         data-item-id="harreth-mens-black-logo-tee"
-
                         data-item-name="Harreth Logo Tee - Black"
-
                         data-item-price="29.99"
-
                         data-item-url="/mens-black-tee.html"
-
                         data-item-image="/images/shirtcol.png"
 
                         data-item-description="Harreth men's black logo tee. Built for long days, weekends outside, and wherever the wild takes you."
 
                         data-item-custom1-name="Size"
-
                         data-item-custom1-options="Small|Medium|Large|XL|2XL|3XL"
-
-                        data-item-custom1-required="true"
-
-                        data-item-custom1-value=""
+                        data-item-custom1-value="Small"
                     >
                         ADD TO CART
                     </button>
@@ -270,67 +257,17 @@
     </footer>
 
 
-    <!-- SYNC SIZE TO SNIPCART -->
+    <!-- SIZE SYNC -->
     <script>
+        const sizeSelect = document.querySelector('#shirt-size');
+        const addButton = document.querySelector('#black-tee-add');
 
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                const sizeSelect =
-                    document.getElementById("shirt-size");
-
-                const addButton =
-                    document.getElementById("black-tee-add");
-
-
-                function syncSize() {
-
-                    const selectedSize =
-                        sizeSelect.value;
-
-                    addButton.setAttribute(
-                        "data-item-custom1-value",
-                        selectedSize
-                    );
-
-                    return selectedSize;
-                }
-
-
-                sizeSelect.addEventListener(
-                    "change",
-                    syncSize
-                );
-
-
-                addButton.addEventListener(
-                    "click",
-                    function (event) {
-
-                        const selectedSize =
-                            syncSize();
-
-                        if (!selectedSize) {
-
-                            event.preventDefault();
-
-                            event.stopImmediatePropagation();
-
-                            alert(
-                                "Please select a size before adding this shirt to your cart."
-                            );
-
-                            sizeSelect.focus();
-                        }
-
-                    },
-                    true
-                );
-
-            }
-        );
-
+        sizeSelect.addEventListener('change', () => {
+            addButton.setAttribute(
+                'data-item-custom1-value',
+                sizeSelect.value
+            );
+        });
     </script>
 
 </body>
