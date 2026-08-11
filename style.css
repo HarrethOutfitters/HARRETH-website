@@ -1455,71 +1455,74 @@ footer > p {
   }
 
 }
+
+
 /* =========================================================
-   LIVE HEADER CART
+   LIVE HEADER CART — CLEAN FINAL VERSION
    ========================================================= */
 
-.header-cart {
-  appearance: none;
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 
-  background: transparent;
   color: var(--white);
 
-  border: none;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-  padding: 0;
+.header-actions > span {
+  color: var(--white);
+}
+
+.site-header .header-cart {
+  all: unset;
+
+  display: inline;
+
+  color: var(--white);
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 700;
 
-  line-height: inherit;
+  line-height: 1;
 
   cursor: pointer;
 
   transition: color 0.2s ease;
 }
 
-.header-cart:hover {
+.site-header .header-cart:hover {
   color: var(--gold);
 }
 
-.header-cart:focus {
-  outline: none;
+.site-header .header-cart:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 4px;
 }
 
-.snipcart-items-count {
+.site-header .header-cart .snipcart-items-count {
   color: inherit;
-  font-weight: 700;
-}
-/* FIX HEADER CART BUTTON */
-
-.site-header .header-cart,
-.site-header button.header-cart,
-.site-header .snipcart-checkout {
-  appearance: none !important;
-  -webkit-appearance: none !important;
-
-  background: none !important;
-  background-color: transparent !important;
-
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-
-  color: #ffffff !important;
-
-  padding: 0 !important;
-  margin: 0 !important;
-
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-
-  cursor: pointer !important;
+  font: inherit;
 }
 
-.site-header .header-cart:hover,
-.site-header .snipcart-checkout:hover {
-  color: var(--gold) !important;
+
+/* =========================================================
+   PHONE — HEADER CART
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .header-actions {
+    gap: 10px;
+
+    font-size: 10px;
+  }
+
+  .site-header .header-cart {
+    font-size: 10px;
+  }
+
 }
