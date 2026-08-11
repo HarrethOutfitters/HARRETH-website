@@ -1098,3 +1098,296 @@ footer > p {
 .product-card p {
     color: #a9a9a9;
 }
+/* =========================================================
+   HARRETH SNIPCART THEME
+   ========================================================= */
+
+#snipcart {
+
+  /* -------------------------
+     HARRETH CORE COLORS
+     ------------------------- */
+
+  --color-default: #f4f4f4;
+  --color-alt: #9b9b9b;
+  --color-icon: #b7924a;
+
+  --color-success: #7fb77e;
+  --color-error: #d66b61;
+
+
+  /* -------------------------
+     LINKS
+     ------------------------- */
+
+  --color-link: #b7924a;
+  --color-link-hover: #d0aa60;
+  --color-link-active: #d0aa60;
+  --color-link-focus: #d0aa60;
+
+  --borderColor-link: currentColor;
+  --borderColor-link-hover: currentColor;
+  --borderColor-link-active: currentColor;
+  --borderColor-link-focus: currentColor;
+
+  --bgColor-link: transparent;
+  --bgColor-link-hover: transparent;
+  --bgColor-link-active: transparent;
+  --bgColor-link-focus: rgba(183, 146, 74, 0.10);
+
+
+  /* -------------------------
+     INPUTS / CHECKOUT FIELDS
+     ------------------------- */
+
+  --color-input: #f4f4f4;
+  --color-input-hover: #ffffff;
+  --color-input-focus: #ffffff;
+  --color-input-checked: #0b0b0b;
+  --color-input-disabled: #777777;
+  --color-input-error: #d66b61;
+
+  --color-inputLabel: #f4f4f4;
+  --color-inputLabel-hover: #ffffff;
+  --color-inputLabel-focus: #b7924a;
+
+  --color-inputIcon: #9b9b9b;
+  --color-inputIcon-hover: #b7924a;
+  --color-inputIcon-focus: #b7924a;
+  --color-inputIcon-checked: #0b0b0b;
+  --color-inputIcon-error: #d66b61;
+
+  --color-inputPlaceholder: #777777;
+
+  --borderColor-input: #383838;
+  --borderColor-input-hover: #b7924a;
+  --borderColor-input-focus: #b7924a;
+  --borderColor-input-checked: #b7924a;
+  --borderColor-input-disabled: #2a2a2a;
+  --borderColor-input-error: #d66b61;
+
+  --bgColor-input: #171717;
+  --bgColor-input-hover: #1b1b1b;
+  --bgColor-input-focus: #1b1b1b;
+  --bgColor-input-checked: #b7924a;
+  --bgColor-input-disabled: #121212;
+  --bgColor-input-error: #171717;
+  --bgColor-input-autofill: #222222;
+
+  --shadow-input-hover: none;
+  --shadow-input-focus: 0 0 0 2px rgba(183, 146, 74, 0.18);
+  --shadow-input-checked: none;
+
+
+  /* -------------------------
+     PRIMARY BUTTONS
+     CHECKOUT / PLACE ORDER
+     ------------------------- */
+
+  --color-buttonPrimary: #0b0b0b;
+  --color-buttonPrimary-hover: #0b0b0b;
+  --color-buttonPrimary-active: #0b0b0b;
+  --color-buttonPrimary-focus: #0b0b0b;
+  --color-buttonPrimary-disabled: #666666;
+  --color-buttonPrimary-success: #0b0b0b;
+  --color-buttonPrimary-error: #ffffff;
+
+  --borderColor-buttonPrimary: #b7924a;
+  --borderColor-buttonPrimary-hover: #d0aa60;
+  --borderColor-buttonPrimary-focus: #d0aa60;
+  --borderColor-buttonPrimary-disabled: #444444;
+  --borderColor-buttonPrimary-success: #7fb77e;
+  --borderColor-buttonPrimary-error: #d66b61;
+
+  --bgColor-buttonPrimary: #b7924a;
+  --bgColor-buttonPrimary-hover: #d0aa60;
+  --bgColor-buttonPrimary-active: #a7823d;
+  --bgColor-buttonPrimary-focus: #d0aa60;
+  --bgColor-buttonPrimary-disabled: #333333;
+  --bgColor-buttonPrimary-success: #7fb77e;
+  --bgColor-buttonPrimary-error: #d66b61;
+
+  --shadow-buttonPrimary-hover: 0 8px 18px rgba(0, 0, 0, 0.30);
+  --shadow-buttonPrimary-active: none;
+  --shadow-buttonPrimary-focus: 0 0 0 3px rgba(183, 146, 74, 0.25);
+
+
+  /* -------------------------
+     SECONDARY BUTTONS
+     ------------------------- */
+
+  --color-buttonSecondary: #b7924a;
+  --color-buttonSecondary-hover: #d0aa60;
+  --color-buttonSecondary-active: #d0aa60;
+  --color-buttonSecondary-focus: #d0aa60;
+  --color-buttonSecondary-disabled: #666666;
+  --color-buttonSecondary-success: #7fb77e;
+  --color-buttonSecondary-error: #d66b61;
+
+  --borderColor-buttonSecondary: #3a3a3a;
+  --borderColor-buttonSecondary-hover: #b7924a;
+  --borderColor-buttonSecondary-focus: #b7924a;
+  --borderColor-buttonSecondary-disabled: #2a2a2a;
+  --borderColor-buttonSecondary-success: #7fb77e;
+  --borderColor-buttonSecondary-error: #d66b61;
+
+  --bgColor-buttonSecondary: #161616;
+  --bgColor-buttonSecondary-hover: #1e1e1e;
+  --bgColor-buttonSecondary-active: #242424;
+  --bgColor-buttonSecondary-focus: #1e1e1e;
+  --bgColor-buttonSecondary-disabled: #101010;
+  --bgColor-buttonSecondary-success: #18241a;
+  --bgColor-buttonSecondary-error: #2b1614;
+
+
+  /* -------------------------
+     DELETE / DANGER BUTTONS
+     ------------------------- */
+
+  --color-buttonDanger: #d66b61;
+  --color-buttonDanger-hover: #ffffff;
+  --color-buttonDanger-active: #ffffff;
+  --color-buttonDanger-focus: #ffffff;
+  --color-buttonDanger-disabled: #666666;
+  --color-buttonDanger-success: #ffffff;
+  --color-buttonDanger-error: #ffffff;
+
+  --borderColor-buttonDanger: transparent;
+  --borderColor-buttonDanger-hover: transparent;
+  --borderColor-buttonDanger-focus: transparent;
+  --borderColor-buttonDanger-disabled: transparent;
+  --borderColor-buttonDanger-success: transparent;
+  --borderColor-buttonDanger-error: transparent;
+
+  --bgColor-buttonDanger: #2c1715;
+  --bgColor-buttonDanger-hover: #8a342e;
+  --bgColor-buttonDanger-active: #6e2924;
+  --bgColor-buttonDanger-focus: #8a342e;
+  --bgColor-buttonDanger-disabled: #171717;
+  --bgColor-buttonDanger-success: #223324;
+  --bgColor-buttonDanger-error: #8a342e;
+
+
+  /* -------------------------
+     CHECKOUT STEP BADGES
+     ------------------------- */
+
+  --color-badge: #0b0b0b;
+  --color-badge-active: #0b0b0b;
+  --color-badge-disabled: #777777;
+
+  --borderColor-badge: #b7924a;
+  --borderColor-badge-active: #b7924a;
+  --borderColor-badge-disabled: #333333;
+
+  --bgColor-badge: #b7924a;
+  --bgColor-badge-active: #d0aa60;
+  --bgColor-badge-disabled: #1a1a1a;
+
+
+  /* -------------------------
+     MAIN CART / CHECKOUT
+     ------------------------- */
+
+  --borderColor-default: #2d2d2d;
+  --borderColor-error: #7f302a;
+
+  --bgColor-default: #151515;
+  --bgColor-alt: #101010;
+
+  --bgColor-success: #152319;
+  --bgColor-error: #2b1715;
+  --bgColor-info: #1b1b1b;
+
+  --bgColor-modal: #0b0b0b;
+  --bgColor-modalVeil: rgba(0, 0, 0, 0.88);
+
+  --shadow-default: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   EXTRA HARRETH SNIPCART POLISH
+   ========================================================= */
+
+#snipcart .snipcart-modal__container,
+#snipcart .snipcart-cart__content,
+#snipcart .snipcart-layout__content {
+  background:
+    linear-gradient(
+      rgba(10, 10, 10, 0.94),
+      rgba(10, 10, 10, 0.94)
+    ),
+    url("images/topo-lines.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+#snipcart .snipcart-item-line,
+#snipcart .snipcart-cart-summary,
+#snipcart .snipcart-checkout-step,
+#snipcart .snipcart-billing-completed,
+#snipcart .snipcart-payment-methods__container {
+  background: #171717;
+  border-color: #2d2d2d;
+}
+
+
+#snipcart .snipcart__font--secondary,
+#snipcart .snipcart__font--subtitle,
+#snipcart .snipcart__font--std {
+  color: #f4f4f4;
+}
+
+
+#snipcart .snipcart-cart-header__title,
+#snipcart .snipcart-cart-summary__title,
+#snipcart .snipcart-checkout-step__title {
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+
+#snipcart .snipcart-base-button.is-primary {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+
+#snipcart .snipcart-item-line__title {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+
+#snipcart .snipcart-item-line__variant {
+  color: #b7924a;
+}
+
+
+#snipcart .snipcart-summary-fees__amount,
+#snipcart .snipcart-cart-summary-fees__amount {
+  color: #ffffff;
+}
+
+
+#snipcart .snipcart-cart-summary-fees__total {
+  color: #b7924a;
+  font-weight: 900;
+}
+
+
+#snipcart input,
+#snipcart select {
+  border-radius: 0;
+}
+
+
+#snipcart button {
+  border-radius: 0;
+}
