@@ -1372,159 +1372,86 @@ footer > p {
 
 }
 
-
 /* =========================================================
-   SNIPCART — HARRETH BRANDED CART HEADER
+   HOME — SHOP HARRETH HEADING TREATMENT
+   Gold eyebrow + fading gold line + bold white headline
    ========================================================= */
 
-#snipcart .snipcart-cart-header__title {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 10px 24px 14px !important;
-  text-align: left !important;
-  font-size: 0 !important;
-  line-height: 1 !important;
-  color: transparent !important;
+.categories .section-heading {
+  max-width: 1500px;
+  margin: 0 auto 32px;
 }
 
-#snipcart .snipcart-cart-header__title::before {
-  content: "HARRETH OUTFITTERS";
-  display: block;
-  width: 100%;
-  color: #b7924a !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+.categories .section-heading > p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--gold);
+
+  font-size: 14px;
   font-weight: 900;
-  line-height: 1.2;
+
   letter-spacing: 4px;
   text-transform: uppercase;
-  padding-right: 18px;
-  margin-bottom: 10px;
+
+  white-space: nowrap;
+}
+
+.categories .section-heading > p::after {
+  content: "";
+
+  display: block;
+
+  width: min(430px, 42vw);
+  height: 2px;
+
   background:
     linear-gradient(
       to right,
-      #b7924a 0%,
-      rgba(183, 146, 74, 0.72) 45%,
-      rgba(183, 146, 74, 0.18) 82%,
+      rgba(183, 146, 74, 1) 0%,
+      rgba(183, 146, 74, 0.78) 38%,
+      rgba(183, 146, 74, 0.30) 72%,
       rgba(183, 146, 74, 0) 100%
-    )
-    right center / calc(100% - 205px) 2px no-repeat;
+    );
 }
 
-#snipcart .snipcart-cart-header__title::after {
-  content: "GEAR FOR WHEREVER YOU GO.";
-  display: block;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(25px, 3vw, 42px);
+.categories .section-heading h2 {
+  margin-top: 12px;
+
+  color: var(--white);
+
+  font-size: clamp(34px, 4.8vw, 62px);
   font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0.5px;
+
+  line-height: 0.95;
+
+  letter-spacing: -1px;
   text-transform: uppercase;
-}
-
-#snipcart .snipcart-cart-header {
-  min-height: 112px !important;
-  align-items: center !important;
-  border-bottom: 1px solid rgba(183, 146, 74, 0.22) !important;
-}
-
-#snipcart .snipcart-cart-header__close-button,
-#snipcart .snipcart-cart-header__options {
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-
-/* =========================================================
-   SNIPCART — BRANDED CHECKOUT HEADER
-   ========================================================= */
-
-#snipcart .snipcart-checkout__header {
-  position: relative !important;
-  min-height: 132px !important;
-  padding-bottom: 58px !important;
-  border-bottom: 1px solid rgba(183, 146, 74, 0.22) !important;
-}
-
-#snipcart .snipcart-checkout__header::before {
-  content: "HARRETH OUTFITTERS";
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 35px;
-  color: #b7924a !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  background:
-    linear-gradient(
-      to right,
-      #b7924a 0%,
-      rgba(183, 146, 74, 0.72) 45%,
-      rgba(183, 146, 74, 0.18) 82%,
-      rgba(183, 146, 74, 0) 100%
-    )
-    right center / calc(100% - 205px) 2px no-repeat;
-  pointer-events: none;
-}
-
-#snipcart .snipcart-checkout__header::after {
-  content: "GEAR FOR WHEREVER YOU GO.";
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 8px;
-  color: #ffffff !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(21px, 2.6vw, 34px);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  pointer-events: none;
 }
 
 @media (max-width: 700px) {
-  #snipcart .snipcart-cart-header__title {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+
+  .categories .section-heading {
+    margin-bottom: 24px;
   }
 
-  #snipcart .snipcart-cart-header__title::before {
-    font-size: 10px;
+  .categories .section-heading > p {
+    gap: 10px;
+
+    font-size: 11px;
+
     letter-spacing: 2.8px;
-    background-size: calc(100% - 165px) 2px;
   }
 
-  #snipcart .snipcart-cart-header__title::after {
-    font-size: 24px;
+  .categories .section-heading > p::after {
+    width: min(220px, 44vw);
   }
 
-  #snipcart .snipcart-cart-header {
-    min-height: 105px !important;
+  .categories .section-heading h2 {
+    font-size: clamp(30px, 9vw, 44px);
+
+    line-height: 1;
   }
 
-  #snipcart .snipcart-checkout__header {
-    min-height: 120px !important;
-    padding-bottom: 54px !important;
-  }
-
-  #snipcart .snipcart-checkout__header::before {
-    left: 14px;
-    right: 14px;
-    font-size: 10px;
-    letter-spacing: 2.8px;
-    background-size: calc(100% - 165px) 2px;
-  }
-
-  #snipcart .snipcart-checkout__header::after {
-    left: 14px;
-    right: 14px;
-    font-size: 22px;
-  }
 }
