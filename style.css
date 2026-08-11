@@ -1,6 +1,6 @@
 /* ================================
    HARRETH OUTFITTERS
-   Rugged / Tactical Outdoor Theme
+   Clean Master Stylesheet
 ================================ */
 
 /* ---------- RESET ---------- */
@@ -22,6 +22,17 @@ body {
   line-height: 1.5;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
 /* ---------- COLORS ---------- */
 
 :root {
@@ -32,111 +43,67 @@ body {
   --light: #f4f4f4;
   --white: #ffffff;
 
-  /* HARRETH GOLD */
   --gold: #b7924a;
   --gold-hover: #d0aa60;
 }
 
-/* ---------- LINKS ---------- */
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
 
 /* ================================
-   TOP BAR
+   SITE HEADER
 ================================ */
 
-.top-bar {
-  background: var(--gold);
-  color: var(--black);
-  text-align: center;
+.site-header {
+  height: 82px;
+  padding: 0 4%;
 
-  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  font-size: 12px;
-  font-weight: 800;
-
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-/* ================================
-   HEADER / NAVIGATION
-================================ */
-
-header {
-  background: var(--black);
-
-  border-bottom: 1px solid #292929;
+  background: #050505;
+  border-bottom: 1px solid #222;
 
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar {
-  max-width: 1500px;
-  margin: auto;
-
-  height: 82px;
-
-  padding: 0 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 900;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
 .logo img {
-    width:220px;
-    height: auto;
-    display: block;
+  width: 220px;
+  height: auto;
 }
 
-.logo span {
-  color: var(--gold);
-}
-
-.nav-links {
+nav {
   display: flex;
-  align-items: center;
-
-  gap: 34px;
-
-  list-style: none;
+  gap: 30px;
 }
 
-.nav-links a {
+nav a {
   color: var(--white);
 
   font-size: 13px;
   font-weight: 800;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+nav a:hover {
   color: var(--gold);
 }
+
+.header-actions {
+  display: flex;
+  gap: 18px;
+
+  color: var(--white);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
 
 /* ================================
    HERO
@@ -170,14 +137,13 @@ header {
   max-width: 680px;
 }
 
-.hero-small {
+.hero .eyebrow {
   color: var(--gold);
 
   font-size: 14px;
   font-weight: 900;
 
   text-transform: uppercase;
-
   letter-spacing: 3px;
 
   margin-bottom: 15px;
@@ -187,17 +153,15 @@ header {
   font-size: clamp(50px, 7vw, 92px);
 
   line-height: 0.95;
-
   font-weight: 900;
 
   letter-spacing: -3px;
-
   text-transform: uppercase;
 
   margin-bottom: 25px;
 }
 
-.hero p {
+.hero-description {
   max-width: 570px;
 
   color: #d2d2d2;
@@ -207,6 +171,13 @@ header {
   margin-bottom: 32px;
 }
 
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
 /* ================================
    BUTTONS
 ================================ */
@@ -215,7 +186,6 @@ header {
   display: inline-block;
 
   background: var(--gold);
-
   color: var(--black);
 
   padding: 16px 30px;
@@ -226,97 +196,96 @@ header {
   font-weight: 900;
 
   letter-spacing: 1.5px;
-
   text-transform: uppercase;
 
-  transition: all 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
   background: var(--gold-hover);
   border-color: var(--gold-hover);
+  transform: translateY(-2px);
 }
 
 .btn-dark {
   background: transparent;
-
   color: var(--white);
 
-  border: 2px solid var(--white);
+  border-color: var(--white);
 
   margin-left: 10px;
 }
 
 .btn-dark:hover {
   background: var(--white);
+  border-color: var(--white);
   color: var(--black);
 }
 
+
 /* ================================
-   GENERAL SECTION
+   GENERAL SECTIONS
 ================================ */
 
 section {
   padding: 85px 6%;
 }
 
-.section-header {
-  text-align: center;
-
-  max-width: 750px;
-
-  margin: 0 auto 45px;
+.section-heading {
+  max-width: 1500px;
+  margin: 0 auto 10px;
 }
 
-.section-header .eyebrow {
-  color: var(--gold);
+.section-heading > p {
+  color: var(--white);
 
-  font-size: 12px;
-  font-weight: 900;
+  font-size: 13px;
+  font-weight: 800;
 
-  letter-spacing: 3px;
-
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-
-  margin-bottom: 10px;
 }
 
-.section-header h2 {
-  font-size: clamp(34px, 5vw, 55px);
+.section-heading h2 {
+  color: var(--white);
 
+  font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
-
-  text-transform: uppercase;
 
   line-height: 1;
+  text-transform: uppercase;
 
-  letter-spacing: -1px;
+  margin-top: 5px;
 }
 
-.section-header p {
-  color: var(--gray);
-
-  margin-top: 16px;
-
-  font-size: 16px;
-}
 
 /* ================================
-   CATEGORY GRID
+   CATEGORY / SHOP HARRETH GRID
 ================================ */
 
 .categories {
-  background: var(--dark);
+  background:
+    linear-gradient(
+      rgba(10, 10, 10, 0.88),
+      rgba(10, 10, 10, 0.88)
+    ),
+    url("images/topo-lines.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .category-grid {
   max-width: 1500px;
-
   margin: auto;
 
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 14px;
 }
@@ -325,15 +294,22 @@ section {
   min-height: 440px;
 
   position: relative;
-
   overflow: hidden;
 
-  background: var(--charcoal);
+  background: #1f1f1f;
 
   display: flex;
   align-items: flex-end;
 
   cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
 }
 
 .category-card img {
@@ -342,11 +318,16 @@ section {
   width: 100%;
   height: 85%;
 
-  object-fit: contain;
   top: 20px;
-  left: 0%;
+  left: 0;
+
+  object-fit: contain;
 
   transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.04);
 }
 
 .category-card::after {
@@ -355,207 +336,111 @@ section {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.05)
-  );
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.78) 18%,
+      rgba(0, 0, 0, 0.20) 48%,
+      rgba(0, 0, 0, 0.02) 72%
+    );
+
+  pointer-events: none;
 }
 
-.category-card:hover img {
-  transform: scale(1.04);
-}
+/*
+   Your current index.html uses a plain <div>
+   inside each .category-card, so target that
+   directly instead of the old .category-content class.
+*/
 
-.category-content {
+.category-card > div {
   position: relative;
   z-index: 2;
 
-  padding: 28px;
-
   width: 100%;
+
+  padding: 30px 22px 22px;
 }
 
-.category-content h3 {
-  font-size: 28px;
+.category-card > div span {
+  display: block;
 
-  font-weight: 900;
+  color: var(--gold);
 
-  text-transform: uppercase;
-
-  letter-spacing: -1px;
-}
-
-.category-content p {
-  color: #c9c9c9;
-
-  margin-top: 4px;
-
-  font-size: 13px;
-
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
 
   letter-spacing: 1px;
+
+  margin-bottom: 3px;
 }
 
-/* ================================
-   FEATURED PRODUCTS
-================================ */
+.category-card > div h3 {
+  color: var(--white);
 
-.products {
-  background: #f0f0ee;
-
-  color: #111;
-}
-
-.product-grid {
-  max-width: 1500px;
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 24px;
-}
-
-.product-card {
-  background: #ffffff;
-
-  position: relative;
-
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-}
-
-.product-image {
-  background: #e7e7e5;
-
-  aspect-ratio: 4 / 5;
-
-  overflow: hidden;
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.product-info {
-  padding: 18px;
-}
-
-.product-info h3 {
-  font-size: 16px;
-
+  font-size: 25px;
   font-weight: 900;
+
+  line-height: 1;
+  letter-spacing: -0.5px;
 
   text-transform: uppercase;
+
+  margin: 0 0 7px;
 }
 
-.product-info p {
-  color: #666;
+.category-card > div p {
+  color: #d5d5d5;
 
   font-size: 13px;
+  font-weight: 700;
 
-  margin-top: 3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin: 0;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.product-price {
-  margin-top: 12px;
-
-  font-size: 15px;
-  font-weight: 900;
+.category-card:hover > div p {
+  color: var(--white);
+  transform: translateX(3px);
 }
+
 
 /* ================================
-   BUILT FOR THE WILD SECTION
+   BRAND STRIP
 ================================ */
 
-.built-wild {
-  min-height: 580px;
+.brand-strip {
+  padding: 55px 6%;
+
+  background: #111111;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("images/wild.jpg");
+  gap: 24px;
 
-  background-size: cover;
-
-  background-position: center;
+  border-top: 1px solid #202020;
+  border-bottom: 1px solid #202020;
 }
 
-.built-wild-content {
-  max-width: 650px;
-}
+.brand-strip p {
+  color: var(--white);
 
-.built-wild h2 {
-  font-size: clamp(48px, 7vw, 85px);
-
-  text-transform: uppercase;
-
-  line-height: 0.95;
-
+  font-size: clamp(17px, 2vw, 24px);
   font-weight: 900;
 
-  letter-spacing: -3px;
-
-  margin-bottom: 20px;
-}
-
-.built-wild h2 span {
-  color: var(--gold);
-}
-
-.built-wild p {
-  color: #d2d2d2;
-
-  max-width: 540px;
-
-  font-size: 17px;
-
-  margin-bottom: 28px;
-}
-
-/* ================================
-   BRAND STATEMENT
-================================ */
-
-.brand-statement {
-  background: var(--gold);
-
-  color: var(--black);
-
-  text-align: center;
-
-  padding-top: 65px;
-  padding-bottom: 65px;
-}
-
-.brand-statement h2 {
-  max-width: 1000px;
-
-  margin: auto;
-
-  font-size: clamp(30px, 5vw, 55px);
-
-  line-height: 1.05;
-
-  font-weight: 900;
-
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+
 
 /* ================================
    FOOTER
@@ -564,112 +449,166 @@ section {
 footer {
   background: #080808;
 
-  padding: 65px 6% 25px;
+  padding: 55px 6% 25px;
 
   border-top: 1px solid #242424;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
 }
 
-.footer-grid {
-  max-width: 1500px;
+.footer-brand h2 {
+  color: var(--white);
 
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-
-  gap: 50px;
-}
-
-.footer-logo {
-  font-size: 28px;
-
+  font-size: 30px;
   font-weight: 900;
 
   letter-spacing: 3px;
-
-  margin-bottom: 15px;
 }
 
-.footer-about {
-  max-width: 380px;
-
-  color: #929292;
-
-  font-size: 14px;
-}
-
-.footer-column h4 {
-  color: var(--white);
-
-  font-size: 13px;
-
-  font-weight: 900;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.5px;
-
-  margin-bottom: 15px;
-}
-
-.footer-column a {
-  display: block;
-
-  color: #999;
-
-  font-size: 14px;
-
-  margin-bottom: 9px;
-}
-
-.footer-column a:hover {
+.footer-brand p {
   color: var(--gold);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
 }
 
-.footer-bottom {
-  max-width: 1500px;
-
-  margin: 50px auto 0;
-
-  padding-top: 20px;
-
-  border-top: 1px solid #222;
-
+footer > p {
   color: #666;
 
   font-size: 12px;
-
-  text-align: center;
 }
 
+
 /* ================================
-   MOBILE
+   MEN'S COLLECTION PAGE
+================================ */
+
+.mens-hero {
+  background: #161616;
+
+  padding: 90px 8%;
+
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.mens-hero-content {
+  max-width: 800px;
+}
+
+.mens-hero h1 {
+  font-size: clamp(42px, 6vw, 78px);
+
+  margin: 10px 0 15px;
+
+  line-height: 0.95;
+}
+
+.mens-hero-content > p:last-child {
+  max-width: 620px;
+
+  font-size: 18px;
+
+  color: #c9c9c9;
+}
+
+.mens-shop {
+  padding: 70px 8% 100px;
+
+  background:
+    linear-gradient(
+      rgba(10, 10, 10, 0.88),
+      rgba(10, 10, 10, 0.88)
+    ),
+    url("images/topo-lines.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mens-shop .section-heading {
+  margin-bottom: 35px;
+}
+
+.mens-shop .section-heading h2 {
+  font-size: clamp(32px, 4vw, 52px);
+
+  margin-top: 6px;
+}
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.product-card {
+  background: #1b1b1b;
+
+  padding: 20px;
+
+  transition: transform 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: contain;
+
+  background: #202020;
+}
+
+.product-card h3 {
+  margin: 18px 0 5px;
+
+  color: var(--white);
+
+  font-size: 20px;
+
+  letter-spacing: 0.5px;
+}
+
+.product-card p {
+  margin: 0;
+
+  color: #a9a9a9;
+}
+
+
+/* ================================
+   TABLET
 ================================ */
 
 @media (max-width: 1000px) {
 
-  .navbar {
+  .site-header {
     padding: 0 20px;
   }
 
-  .nav-links {
+  nav {
     gap: 18px;
   }
 
   .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 }
+
 
 /* ================================
    PHONE
@@ -681,16 +620,24 @@ footer {
     padding: 60px 20px;
   }
 
-  .navbar {
+  .site-header {
     height: 70px;
+
+    padding: 0 18px;
   }
 
-  .logo {
-    font-size: 22px;
+  .logo img {
+    width: 170px;
   }
 
-  .nav-links {
+  nav {
     display: none;
+  }
+
+  .header-actions {
+    gap: 10px;
+
+    font-size: 10px;
   }
 
   .hero {
@@ -706,7 +653,7 @@ footer {
         rgba(0, 0, 0, 0.92),
         rgba(0, 0, 0, 0.25)
       ),
-      url("images/hero.jpg");
+      url("images/hero.png");
 
     background-size: cover;
     background-position: 35% center;
@@ -719,8 +666,12 @@ footer {
     letter-spacing: -2px;
   }
 
-  .hero p {
+  .hero-description {
     font-size: 16px;
+  }
+
+  .hero-buttons {
+    display: block;
   }
 
   .btn {
@@ -745,75 +696,214 @@ footer {
     min-height: 390px;
   }
 
+  .category-card > div {
+    padding: 26px 20px 20px;
+  }
+
+  .category-card > div h3 {
+    font-size: 23px;
+  }
+
+  .brand-strip {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 45px 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-  }
-
-  .product-info {
-    padding: 12px;
-  }
-
-  .product-info h3 {
-    font-size: 13px;
-  }
-
-  .built-wild {
-    min-height: 600px;
-
-    align-items: flex-end;
-
-    padding-bottom: 60px;
-  }
-
-  .built-wild h2 {
-    font-size: 53px;
-  }
-
-  .footer-grid {
     grid-template-columns: 1fr;
+  }
 
-    gap: 30px;
+  .mens-hero {
+    padding: 65px 6%;
+  }
+
+  .mens-shop {
+    padding: 50px 6% 80px;
   }
 
 }
-.site-header {
-  height: 82px;
-  padding: 0 4%;
+
+/* ================================
+   PRODUCT DETAIL PAGE
+================================ */
+
+.product-page {
+  min-height: 700px;
+
+  background:
+    linear-gradient(
+      rgba(10, 10, 10, 0.90),
+      rgba(10, 10, 10, 0.90)
+    ),
+    url("images/topo-lines.png");
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 90px 7%;
+}
+
+.product-page-grid {
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 70px;
+  align-items: center;
+}
+
+.product-page-image {
+  background: #1b1b1b;
+
+  min-height: 600px;
+
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #050505;
-  border-bottom: 1px solid #222;
+  justify-content: center;
+
+  padding: 40px;
 }
 
-.logo {
+.product-page-image img {
+  width: 100%;
+  max-height: 560px;
+
+  object-fit: contain;
+}
+
+.product-page-info {
+  max-width: 520px;
+}
+
+.product-eyebrow {
+  color: var(--gold);
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.product-page-info h1 {
+  color: #ffffff;
+
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 900;
+
+  line-height: 1;
+
+  margin-bottom: 10px;
+}
+
+.product-color {
+  color: #a7a7a7;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+.product-price {
+  color: var(--gold);
+
   font-size: 28px;
   font-weight: 900;
-  letter-spacing: 3px;
+
+  margin-bottom: 25px;
 }
 
-.logo img {
-  width: 220px;
-  height: auto;
+.product-description {
+  color: #d0d0d0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+.product-option {
+  margin-bottom: 25px;
+}
+
+.product-option label {
   display: block;
-}
 
-nav {
-  display: flex;
-  gap: 30px;
-}
+  color: #ffffff;
 
-nav a {
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-}
-
-.header-actions {
-  display: flex;
-  gap: 18px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 8px;
+}
+
+.product-option select {
+  width: 100%;
+
+  background: #1b1b1b;
+  color: #ffffff;
+
+  border: 1px solid #444;
+
+  padding: 14px;
+
+  font-size: 14px;
+}
+
+.add-cart-btn {
+  width: 100%;
+
+  background: var(--gold);
+  color: #0b0b0b;
+
+  border: none;
+
+  padding: 17px;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background: var(--gold-hover);
+}
+
+@media (max-width: 800px) {
+
+  .product-page-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .product-page-image {
+    min-height: 420px;
+  }
+
 }
