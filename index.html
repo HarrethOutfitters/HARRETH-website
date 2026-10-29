@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,182 +6,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harreth Outfitters | Built for the Wild</title>
+    <title>HARRETH Outfitters | Live Where Adventure Leads</title>
+
+    <meta name="description"
+          content="HARRETH Outfitters. Outdoor-inspired apparel, headwear, and gear for every journey. Live Where Adventure Leads.">
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* HEADER BUTTONS */
+
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .header-search:focus-visible,
+        .header-cart:focus-visible {
+            outline: 2px solid #C2A15D;
+            outline-offset: 5px;
+        }
+
+        /* WOMEN'S HERO BUTTON */
+
+        .hero-buttons .btn-cream {
+            background-color: #E8DDC5;
+            color: #24231F;
+            border: 2px solid #E8DDC5;
+            transition: background-color 0.2s ease,
+                        color 0.2s ease;
+        }
+
+        .hero-buttons .btn-cream:hover {
+            background-color: #F5EDDE;
+            border-color: #F5EDDE;
+            color: #24231F;
+        }
+
+        /* LITTLE ADVENTURERS CARD */
+
+        .category-card.kids-category {
+            position: relative;
+            min-height: 340px;
+            background: linear-gradient(
+                145deg,
+                #293A30,
+                #17251E 65%,
+                #101B16
+            );
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .kids-card-art {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 12px;
+            padding: 25px;
+            padding-bottom: 105px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .kids-mountain {
+            color: #C2A15D;
+            font-size: 65px;
+            line-height: 1;
+        }
+
+        .kids-message {
+            color: #F5EDDE;
+            font-size: clamp(19px, 2.5vw, 28px);
+            font-weight: 800;
+            letter-spacing: 3px;
+            line-height: 1.25;
+        }
+
+        .kids-coming-soon {
+            color: #C2A15D;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .kids-category .kids-card-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            padding-top: 45px;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.85)
+            );
+        }
+
+        .kids-category .kids-card-caption h3,
+        .kids-category .kids-card-caption p,
+        .kids-category .kids-card-caption span {
+            color: #F5EDDE;
+        }
+
+        /* MOBILE NAVIGATION */
+
+        @media (max-width: 768px) {
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .site-header nav a {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+
+            .kids-category {
+                min-height: 310px;
+            }
+        }
+    </style>
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
 </head>
 
 <body>
 
-    <!-- =====================================================
-         SNIPCART INSTALL
-         ===================================================== -->
+    <!-- SNIPCART CONTAINER -->
 
-    <script>
-        window.SnipcartSettings = {
-            publicApiKey: 'YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3'
-        };
-
-        (() => {
-            var c, d;
-            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
-
-            var s, S;
-            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
-
-            var l, p;
-            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
-
-            var w, u;
-            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
-
-            var f =
-                window.SnipcartSettings.version.includes("v3.0.0-ci") ||
-                window.SnipcartSettings.version != "3.0" &&
-                window.SnipcartSettings.version.localeCompare(
-                    "3.4.0",
-                    void 0,
-                    { numeric: !0, sensitivity: "base" }
-                ) === -1;
-
-            var m = [
-                "focus",
-                "mouseover",
-                "touchmove",
-                "scroll",
-                "keydown"
-            ];
-
-            window.LoadSnipcart = o;
-
-            document.readyState === "loading"
-                ? document.addEventListener("DOMContentLoaded", r)
-                : r();
-
-            function r() {
-                window.SnipcartSettings.loadStrategy
-                    ? window.SnipcartSettings.loadStrategy === "on-user-interaction" &&
-                      (
-                        m.forEach(t => document.addEventListener(t, o)),
-                        setTimeout(o, window.SnipcartSettings.timeoutDuration)
-                      )
-                    : o();
-            }
-
-            var a = false;
-
-            function o() {
-
-                if (a) return;
-
-                a = true;
-
-                let t = document.getElementsByTagName("head")[0],
-
-                    e = document.querySelector("#snipcart"),
-
-                    i = document.querySelector(
-                        `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
-                    ),
-
-                    n = document.querySelector(
-                        `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
-                    );
-
-                e || (
-                    e = document.createElement("div"),
-                    e.id = "snipcart",
-                    e.setAttribute("hidden", "true"),
-                    document.body.appendChild(e)
-                );
-
-                v(e);
-
-                i || (
-                    i = document.createElement("script"),
-                    i.src =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,
-                    i.async = true,
-                    t.appendChild(i)
-                );
-
-                n || (
-                    n = document.createElement("link"),
-                    n.rel = "stylesheet",
-                    n.type = "text/css",
-                    n.href =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,
-                    t.prepend(n)
-                );
-
-                m.forEach(g =>
-                    document.removeEventListener(g, o)
-                );
-            }
-
-            function v(t) {
-                !f || (
-                    t.dataset.apiKey =
-                        window.SnipcartSettings.publicApiKey
-                );
-            }
-
-        })();
-    </script>
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
 
 
-    <!-- =====================================================
+    <!-- =====================================
          HEADER
-         ===================================================== -->
+    ===================================== -->
 
     <header class="site-header">
 
         <div class="logo">
-
             <a href="index.html">
                 <img
                     src="images/logo.png"
-                    alt="Harreth Outfitters"
+                    alt="HARRETH Outfitters"
                 >
             </a>
-
         </div>
 
-
-        <nav>
-
-            <a href="men.html">
-                MEN
-            </a>
-
-            <a href="women.html">
-                WOMEN
-            </a>
-
-            <a href="headwear.html">
-                HEADWEAR
-            </a>
-
-            <a href="gear.html">
-                GEAR
-            </a>
-
-            <a href="#">
-                ABOUT
-            </a>
-
+        <nav aria-label="Main navigation">
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="kids.html">KIDS</a>
+            <a href="headwear.html">HEADWEAR</a>
+            <a href="gear.html">GEAR</a>
+            <a href="about.html">ABOUT</a>
         </nav>
-
 
         <div class="header-actions">
 
-            <span>
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()"
+            >
                 SEARCH
-            </span>
+            </button>
 
             <button
-                class="header-cart snipcart-checkout"
                 type="button"
+                class="header-cart snipcart-checkout"
             >
                 CART
                 (<span class="snipcart-items-count">0</span>)
@@ -191,16 +209,13 @@
     </header>
 
 
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
+    <!-- =====================================
+         MAIN CONTENT
+    ===================================== -->
 
     <main>
 
-
-        <!-- =================================================
-             HERO
-             ================================================= -->
+        <!-- HOMEPAGE HERO -->
 
         <section class="hero">
 
@@ -211,12 +226,14 @@
                 </p>
 
                 <h1>
-                    BUILT FOR<br>
-                    THE WILD.
+                    LIVE WHERE<br>
+                    ADVENTURE LEADS.
                 </h1>
 
                 <p class="hero-description">
-                    Durable comfort for wherever the outdoors takes you.
+                    Outdoor-inspired apparel and gear
+                    for every journey, every trail,
+                    and every adventure worth taking.
                 </p>
 
                 <div class="hero-buttons">
@@ -230,7 +247,7 @@
 
                     <a
                         href="women.html"
-                        class="btn btn-dark"
+                        class="btn btn-cream"
                     >
                         SHOP WOMEN
                     </a>
@@ -242,17 +259,15 @@
         </section>
 
 
-        <!-- =================================================
-             SHOP HARRETH
-             ================================================= -->
+        <!-- =====================================
+             SHOP CATEGORIES
+        ===================================== -->
 
         <section class="categories">
 
             <div class="section-heading">
 
-                <p>
-                    SHOP HARRETH
-                </p>
+                <p>SHOP HARRETH</p>
 
                 <h2>
                     GEAR FOR WHEREVER YOU GO.
@@ -263,7 +278,6 @@
 
             <div class="category-grid">
 
-
                 <!-- MEN -->
 
                 <a
@@ -273,23 +287,13 @@
 
                     <img
                         src="images/shirtcolwhite.png"
-                        alt="Harreth Men's Collection"
+                        alt="HARRETH Men's Collection"
                     >
 
                     <div>
-
-                        <span>
-                            01
-                        </span>
-
-                        <h3>
-                            MEN'S
-                        </h3>
-
-                        <p>
-                            SHOP COLLECTION →
-                        </p>
-
+                        <span>01</span>
+                        <h3>MEN'S</h3>
+                        <p>SHOP COLLECTION →</p>
                     </div>
 
                 </a>
@@ -304,23 +308,13 @@
 
                     <img
                         src="images/womenstan.png"
-                        alt="Harreth Women's Collection"
+                        alt="HARRETH Women's Collection"
                     >
 
                     <div>
-
-                        <span>
-                            02
-                        </span>
-
-                        <h3>
-                            WOMEN'S
-                        </h3>
-
-                        <p>
-                            SHOP COLLECTION →
-                        </p>
-
+                        <span>02</span>
+                        <h3>WOMEN'S</h3>
+                        <p>SHOP COLLECTION →</p>
                     </div>
 
                 </a>
@@ -335,23 +329,13 @@
 
                     <img
                         src="images/rich112.png"
-                        alt="Harreth Headwear Collection"
+                        alt="HARRETH Headwear Collection"
                     >
 
                     <div>
-
-                        <span>
-                            03
-                        </span>
-
-                        <h3>
-                            HEADWEAR
-                        </h3>
-
-                        <p>
-                            SHOP COLLECTION →
-                        </p>
-
+                        <span>03</span>
+                        <h3>HEADWEAR</h3>
+                        <p>SHOP COLLECTION →</p>
                     </div>
 
                 </a>
@@ -366,23 +350,46 @@
 
                     <img
                         src="images/backpack3.png"
-                        alt="Harreth Gear Collection"
+                        alt="HARRETH Gear Collection"
                     >
 
                     <div>
+                        <span>04</span>
+                        <h3>GEAR</h3>
+                        <p>SHOP COLLECTION →</p>
+                    </div>
 
-                        <span>
-                            04
+                </a>
+
+
+                <!-- KIDS -->
+
+                <a
+                    href="kids.html"
+                    class="category-card kids-category"
+                    aria-label="Little Adventurers Coming Soon"
+                >
+
+                    <div class="kids-card-art"
+                         aria-hidden="true">
+
+                        <span class="kids-mountain">▲</span>
+
+                        <span class="kids-message">
+                            LITTLE<br>
+                            ADVENTURERS
                         </span>
 
-                        <h3>
-                            GEAR
-                        </h3>
+                        <span class="kids-coming-soon">
+                            COMING SOON
+                        </span>
 
-                        <p>
-                            SHOP COLLECTION →
-                        </p>
+                    </div>
 
+                    <div class="kids-card-caption">
+                        <span>05</span>
+                        <h3>KIDS</h3>
+                        <p>EXPLORE WHAT'S COMING →</p>
                     </div>
 
                 </a>
@@ -392,52 +399,56 @@
         </section>
 
 
-        <!-- =================================================
+        <!-- =====================================
              BRAND STRIP
-             ================================================= -->
+        ===================================== -->
 
         <section class="brand-strip">
 
-            <p>
-                BUILT FOR WORK.
-            </p>
+            <p>MADE FOR THE JOURNEY.</p>
 
-            <p>
-                BUILT FOR WEEKENDS.
-            </p>
+            <p>INSPIRED BY FAMILY.</p>
 
-            <p>
-                BUILT FOR THE WILD.
-            </p>
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
 
         </section>
 
     </main>
 
 
-    <!-- =====================================================
+    <!-- =====================================
          FOOTER
-         ===================================================== -->
+    ===================================== -->
 
     <footer>
 
         <div class="footer-brand">
 
-            <h2>
-                HARRETH
-            </h2>
+            <h2>HARRETH</h2>
 
-            <p>
-                BUILT FOR THE WILD.
-            </p>
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
 
         </div>
 
-        <p>
-            © 2026 HARRETH OUTFITTERS
-        </p>
+        <p>© 2026 HARRETH OUTFITTERS</p>
 
     </footer>
+
+
+    <!-- =====================================
+         SCRIPTS
+    ===================================== -->
+
+    <!-- SNIPCART -->
+
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+    <!-- HARRETH SEARCH -->
+
+    <script src="script.js"></script>
 
 </body>
 

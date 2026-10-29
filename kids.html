@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Little Adventurers by Harreth Outfitters. Kids clothing, outdoor education, and family adventures coming soon.">
+
+    <title>Little Adventurers | Harreth Outfitters</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .kids-hero {
+            background: linear-gradient(
+                135deg,
+                #17251E,
+                #304634,
+                #18271E
+            );
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .kids-content {
+            max-width: 750px;
+        }
+
+        .kids-eyebrow {
+            color: #C2A15D;
+            letter-spacing: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .kids-content h1 {
+            color: #F5EDDE;
+            font-size: clamp(42px, 8vw, 82px);
+            line-height: 1.1;
+            margin: 0 0 25px;
+        }
+
+        .kids-description {
+            color: #E8DDC5;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .coming-soon {
+            color: #C2A15D;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+        }
+
+        .kids-back {
+            display: inline-block;
+            background: #C2A15D;
+            color: #24231F;
+            padding: 15px 30px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .kids-back:hover {
+            background: #E8DDC5;
+        }
+
+        .kids-preview {
+            background: #F5EDDE;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .kids-preview h2 {
+            color: #24231F;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .kids-preview > p {
+            color: #4D4B43;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            line-height: 1.7;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .preview-item {
+            background: #E8DDC5;
+            padding: 35px 20px;
+            border-top: 4px solid #C2A15D;
+        }
+
+        .preview-item h3 {
+            color: #24231F;
+            margin-bottom: 12px;
+        }
+
+        .preview-item p {
+            color: #4D4B43;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- SNIPCART CONTAINER -->
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">
+                <img
+                    src="images/logo.png"
+                    alt="Harreth Outfitters"
+                >
+            </a>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="kids.html" aria-current="page">KIDS</a>
+            <a href="headwear.html">HEADWEAR</a>
+            <a href="gear.html">GEAR</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()"
+            >
+                SEARCH
+            </button>
+
+            <button
+                type="button"
+                class="header-cart snipcart-checkout"
+            >
+                CART
+                (<span class="snipcart-items-count">0</span>)
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- KIDS HERO -->
+
+        <section class="kids-hero">
+
+            <div class="kids-content">
+
+                <p class="kids-eyebrow">
+                    HARRETH OUTFITTERS PRESENTS
+                </p>
+
+                <h1>
+                    LITTLE<br>
+                    ADVENTURERS.
+                </h1>
+
+                <p class="kids-description">
+                    Big adventures start with little footsteps.
+                    We're creating something special for the
+                    next generation of explorers.
+
+                    From outdoor-inspired clothing to
+                    discovering nature, wildlife, and the
+                    world around us, Little Adventurers
+                    is all about inspiring kids to get
+                    outside and explore.
+                </p>
+
+                <p class="coming-soon">
+                    COMING SOON
+                </p>
+
+                <a href="index.html" class="kids-back">
+                    BACK TO HARRETH
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- WHAT'S COMING -->
+
+        <section class="kids-preview">
+
+            <h2>
+                THE ADVENTURE IS JUST BEGINNING.
+            </h2>
+
+            <p>
+                Little Adventurers will bring together
+                clothing, education, and family experiences
+                that inspire a lifelong love of the outdoors.
+            </p>
+
+            <div class="preview-grid">
+
+                <div class="preview-item">
+                    <h3>OUTDOOR APPAREL</h3>
+                    <p>
+                        Adventure-ready clothing
+                        for young explorers.
+                    </p>
+                </div>
+
+                <div class="preview-item">
+                    <h3>LEARN & EXPLORE</h3>
+                    <p>
+                        Nature activities, outdoor
+                        lessons, and wildlife education.
+                    </p>
+                </div>
+
+                <div class="preview-item">
+                    <h3>FAMILY ADVENTURES</h3>
+                    <p>
+                        Videos, stories, and ideas
+                        for exploring together.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            <h2>HARRETH</h2>
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
+        </div>
+
+        <p>© 2026 HARRETH OUTFITTERS</p>
+
+    </footer>
+
+    <!-- SNIPCART SCRIPT -->
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+    <!-- HARRETH SEARCH -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

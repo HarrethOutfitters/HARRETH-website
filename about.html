@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story | HARRETH Outfitters</title>
+
+    <meta name="description"
+          content="Discover the story behind HARRETH Outfitters. Family-inspired outdoor apparel and gear. Live Where Adventure Leads.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
+    <style>
+
+        /* =====================================
+           HEADER BUTTONS
+        ===================================== */
+
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .header-search:focus-visible,
+        .header-cart:focus-visible {
+            outline: 2px solid #C2A15D;
+            outline-offset: 5px;
+        }
+
+        /* =====================================
+           ABOUT HERO
+        ===================================== */
+
+        .about-hero {
+            min-height: 460px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.83),
+                    rgba(0,0,0,0.90)
+                ),
+                url("images/topo-lines.png");
+            background-size: cover;
+            background-position: center;
+            padding: 95px 20px;
+            border-bottom: 1px solid #38332a;
+        }
+
+        .about-hero-content {
+            max-width: 950px;
+        }
+
+        .about-eyebrow {
+            color: #b7924a;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+        .about-hero h1 {
+            color: #ffffff;
+            font-size: clamp(42px,7vw,88px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .about-hero h1 span {
+            color: #b7924a;
+        }
+
+        .about-hero-description {
+            color: #c5c5c5;
+            font-size: 18px;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* =====================================
+           OUR STORY
+        ===================================== */
+
+        .about-story {
+            background: #151515;
+            padding: 100px 7%;
+        }
+
+        .about-story-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        /* OUTDOOR IMAGE */
+
+        .about-story-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            position: relative;
+            overflow: hidden;
+            background: #202020;
+            border: 1px solid #38332a;
+        }
+
+        .about-story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .about-story-image:hover img {
+            transform: scale(1.035);
+        }
+
+        .about-story-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,0.28),
+                transparent 45%
+            );
+            pointer-events: none;
+        }
+
+        .about-story-content {
+            max-width: 620px;
+        }
+
+        .about-section-label {
+            color: #b7924a;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .about-story-content h2,
+        .about-purpose h2 {
+            color: #ffffff;
+            font-size: clamp(32px,4vw,50px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 28px;
+        }
+
+        .about-story-content p,
+        .about-purpose p {
+            color: #c5c5c5;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .about-gold-line {
+            width: 75px;
+            height: 3px;
+            background: #b7924a;
+            margin-bottom: 28px;
+        }
+
+        /* =====================================
+           PURPOSE
+        ===================================== */
+
+        .about-purpose {
+            padding: 100px 7%;
+            background:
+                linear-gradient(
+                    rgba(10,10,10,0.94),
+                    rgba(10,10,10,0.94)
+                ),
+                url("images/topo-lines.png");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .about-purpose-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .about-purpose .about-gold-line {
+            margin: 0 auto 30px;
+        }
+
+        /* =====================================
+           BRAND VALUES
+        ===================================== */
+
+        .about-values {
+            background: #171717;
+            padding: 85px 7%;
+            border-top: 1px solid #292929;
+            border-bottom: 1px solid #292929;
+        }
+
+        .about-values-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .about-value-card {
+            padding: 38px 30px;
+            background: #202020;
+            border-top: 3px solid #b7924a;
+        }
+
+        .about-value-card h3 {
+            font-size: 19px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .about-value-card p {
+            font-size: 15px;
+            color: #bcbcbc;
+            line-height: 1.8;
+        }
+
+        /* =====================================
+           CLOSING
+        ===================================== */
+
+        .about-closing {
+            background: #101010;
+            padding: 110px 20px;
+            text-align: center;
+        }
+
+        .about-closing h2 {
+            font-size: clamp(40px,6vw,72px);
+            font-weight: 900;
+            line-height: 1.05;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .about-closing h2 span {
+            color: #b7924a;
+        }
+
+        .about-closing > p:not(.about-section-label) {
+            color: #bcbcbc;
+            font-size: 17px;
+            margin-bottom: 35px;
+        }
+
+        .about-shop-button {
+            display: inline-block;
+            background: #b7924a;
+            color: #0b0b0b;
+            padding: 18px 42px;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .about-shop-button:hover {
+            background: #d0aa60;
+        }
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 800px) {
+
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .site-header nav a {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+
+            .about-story-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-story-image {
+                aspect-ratio: 4 / 3;
+            }
+
+            .about-values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-story,
+            .about-purpose {
+                padding: 65px 6%;
+            }
+
+            .about-hero {
+                min-height: 370px;
+            }
+
+            .about-closing {
+                padding: 75px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         SNIPCART
+    ===================================== -->
+
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
+
+
+    <!-- =====================================
+         HEADER
+    ===================================== -->
+
+    <header class="site-header">
+
+        <div class="logo">
+            <a href="index.html">
+                <img
+                    src="images/logo.png"
+                    alt="HARRETH Outfitters">
+            </a>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <a href="men.html">MEN</a>
+            <a href="women.html">WOMEN</a>
+            <a href="kids.html">KIDS</a>
+            <a href="headwear.html">HEADWEAR</a>
+            <a href="gear.html">GEAR</a>
+            <a href="about.html" aria-current="page">ABOUT</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()">
+                SEARCH
+            </button>
+
+            <button
+                type="button"
+                class="header-cart snipcart-checkout">
+                CART
+                (<span class="snipcart-items-count">0</span>)
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         MAIN
+    ===================================== -->
+
+    <main>
+
+        <!-- ABOUT HERO -->
+
+        <section class="about-hero">
+
+            <div class="about-hero-content">
+
+                <p class="about-eyebrow">
+                    THE STORY BEHIND HARRETH
+                </p>
+
+                <h1>
+                    MORE THAN A NAME.<br>
+                    <span>LIVE WHERE ADVENTURE LEADS.</span>
+                </h1>
+
+                <p class="about-hero-description">
+                    Born from family. Inspired by the outdoors.
+                    Built with purpose.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- OUR STORY -->
+
+        <section class="about-story">
+
+            <div class="about-story-container">
+
+                <!-- OUTDOOR PHOTOGRAPH -->
+
+                <div class="about-story-image">
+
+                    <img
+                        src="images/about-outdoor.png"
+                        alt="Golden sunset over a mountain wilderness, forest and lake"
+                        loading="lazy">
+
+                </div>
+
+                <!-- STORY TEXT -->
+
+                <div class="about-story-content">
+
+                    <p class="about-section-label">
+                        OUR STORY
+                    </p>
+
+                    <h2>
+                        EVERY GREAT JOURNEY
+                        STARTS SOMEWHERE.
+                    </h2>
+
+                    <div class="about-gold-line"></div>
+
+                    <p>
+                        HARRETH started with something more
+                        meaningful than clothing — family.
+                    </p>
+
+                    <p>
+                        Inspired by my children, the name HARRETH
+                        represents the people who give this brand
+                        its purpose and the desire to build
+                        something lasting for the future.
+                    </p>
+
+                    <p>
+                        What began as an idea grew into a vision:
+                        to create outdoor-inspired apparel and
+                        gear for people who work hard, enjoy
+                        the outdoors, and aren't afraid to
+                        take the road less traveled.
+                    </p>
+
+                    <p>
+                        From everyday life to weekend adventures,
+                        HARRETH is about carrying that same
+                        sense of purpose wherever life takes you.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PURPOSE -->
+
+        <section class="about-purpose">
+
+            <div class="about-purpose-container">
+
+                <p class="about-section-label">
+                    WHAT WE STAND FOR
+                </p>
+
+                <h2>
+                    BUILT FOR MORE
+                    THAN THE MOMENT.
+                </h2>
+
+                <div class="about-gold-line"></div>
+
+                <p>
+                    We believe outdoor apparel should be
+                    comfortable enough for everyday life
+                    and ready to go wherever the next
+                    adventure leads.
+                </p>
+
+                <p>
+                    Our vision is to build a brand that
+                    combines rugged outdoor style,
+                    practical design, and a commitment
+                    to creating something meaningful.
+                </p>
+
+                <p>
+                    We're building HARRETH one step at
+                    a time, with the goal of creating
+                    apparel and gear that people can
+                    make part of their own journeys.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BRAND VALUES -->
+
+        <section class="about-values">
+
+            <div class="about-values-grid">
+
+                <div class="about-value-card">
+
+                    <h3>FAMILY & PURPOSE</h3>
+
+                    <p>
+                        Our roots are in family and the
+                        belief that the things we build
+                        should stand for something
+                        greater than ourselves.
+                    </p>
+
+                </div>
+
+                <div class="about-value-card">
+
+                    <h3>THE OUTDOOR SPIRIT</h3>
+
+                    <p>
+                        From quiet mornings outside
+                        to long days on the trail,
+                        we draw inspiration from
+                        life beyond four walls.
+                    </p>
+
+                </div>
+
+                <div class="about-value-card">
+
+                    <h3>THE ROAD AHEAD</h3>
+
+                    <p>
+                        We're just getting started.
+                        Every design, every collection,
+                        and every step forward is part
+                        of building something lasting.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOSING SECTION -->
+
+        <section class="about-closing">
+
+            <p class="about-section-label">
+                HARRETH OUTFITTERS
+            </p>
+
+            <h2>
+                LIVE WHERE<br>
+                <span>ADVENTURE LEADS.</span>
+            </h2>
+
+            <p>
+                Wherever your journey leads,
+                take HARRETH with you.
+            </p>
+
+            <a
+                href="index.html"
+                class="about-shop-button">
+                EXPLORE HARRETH →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+            <h2>HARRETH</h2>
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
+        </div>
+
+        <p>© 2026 HARRETH OUTFITTERS</p>
+
+    </footer>
+
+
+    <!-- =====================================
+         SCRIPTS
+    ===================================== -->
+
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

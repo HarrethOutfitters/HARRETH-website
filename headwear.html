@@ -1,65 +1,191 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+          content="Shop Harreth Outfitters headwear. Discover outdoor-inspired hats designed for everyday adventures. Live Where Adventure Leads.">
+
     <title>Headwear Collection | Harreth Outfitters</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- HARRETH HEADER BUTTONS -->
+    <style>
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .header-search:focus-visible,
+        .header-cart:focus-visible {
+            outline: 2px solid #C2A15D;
+            outline-offset: 5px;
+        }
+
+        /* MOBILE NAVIGATION */
+        @media (max-width: 768px) {
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .site-header nav a {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+        }
+    </style>
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
 </head>
 
 <body>
+
+    <!-- SNIPCART CONTAINER -->
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
+
+    <!-- =====================================
+         HARRETH HEADER
+    ====================================== -->
 
     <header class="site-header">
 
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo.png" alt="Harreth Outfitters">
+                <img
+                    src="images/logo.png"
+                    alt="Harreth Outfitters"
+                >
             </a>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="men.html">MEN</a>
             <a href="women.html">WOMEN</a>
-            <a href="headwear.html">HEADWEAR</a>
+            <a href="kids.html">KIDS</a>
+            <a href="headwear.html" aria-current="page">HEADWEAR</a>
             <a href="gear.html">GEAR</a>
-            <a href="#">ABOUT</a>
+            <a href="about.html">ABOUT</a>
         </nav>
 
         <div class="header-actions">
-            <span>SEARCH</span>
-            <span>CART (0)</span>
+
+            <!-- HARRETH SEARCH BUTTON -->
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()"
+            >
+                SEARCH
+            </button>
+
+            <!-- SNIPCART SHOPPING CART -->
+            <button
+                type="button"
+                class="header-cart snipcart-checkout"
+            >
+                CART
+                (<span class="snipcart-items-count">0</span>)
+            </button>
+
         </div>
 
     </header>
 
 
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
     <main>
 
+        <!-- HEADWEAR HERO -->
+
         <section class="mens-hero">
+
             <div class="mens-hero-content">
-                <p class="eyebrow">HARRETH OUTFITTERS</p>
+
+                <p class="eyebrow">
+                    HARRETH OUTFITTERS
+                </p>
+
                 <h1>HEADWEAR</h1>
-                <p>Built for long days outside and wherever the wild takes you.</p>
+
+                <p>
+                    Made for early mornings, long days,
+                    and every adventure in between.
+                    Discover headwear that goes
+                    wherever life takes you.
+                </p>
+
             </div>
+
         </section>
 
+
+        <!-- HEADWEAR COLLECTION -->
 
         <section class="mens-shop">
 
             <div class="section-heading">
-                <p class="eyebrow">BUILT FOR THE WILD</p>
+
+                <p class="eyebrow">
+                    LIVE WHERE ADVENTURE LEADS.
+                </p>
+
                 <h2>SHOP HEADWEAR</h2>
+
             </div>
+
 
             <div class="product-grid">
 
-                <a href="headwear-hat.html" class="product-card">
-    <img src="images/rich112.png" alt="Harreth Richardson 112 Hat">
-    <h3>HARRETH LOGO HAT</h3>
-    <p>Loden / Black</p>
-</a>
+                <!-- RICHARDSON 112 HAT -->
+
+                <a
+                    href="headwear-hat.html"
+                    class="product-card"
+                >
+
+                    <img
+                        src="images/rich112.png"
+                        alt="Harreth Richardson 112 Hat"
+                    >
+
+                    <h3>
+                        HARRETH LOGO HAT
+                    </h3>
+
+                    <p>
+                        Loden / Black
+                    </p>
+
+                </a>
 
             </div>
 
@@ -68,16 +194,36 @@
     </main>
 
 
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
 
         <div class="footer-brand">
+
             <h2>HARRETH</h2>
-            <p>BUILT FOR THE WILD.</p>
+
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
+
         </div>
 
-        <p>© 2026 HARRETH OUTFITTERS</p>
+        <p>
+            © 2026 HARRETH OUTFITTERS
+        </p>
 
     </footer>
 
+
+    <!-- SNIPCART SCRIPT -->
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+    <!-- HARRETH PREMIUM SEARCH -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>

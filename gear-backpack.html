@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,153 +6,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harreth Rugged Backpack | Harreth Outfitters</title>
+    <title>Rugged Backpack | HARRETH Outfitters</title>
+
+    <meta
+        name="description"
+        content="Explore the HARRETH Rugged Pack in Coyote Brown. Outdoor-inspired storage for work, travel, and adventures. Live Where Adventure Leads."
+    >
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
+    <style>
+
+        /* HEADER BUTTONS */
+
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .header-search:focus-visible,
+        .header-cart:focus-visible {
+            outline: 2px solid #C2A15D;
+            outline-offset: 5px;
+        }
+
+        /* MOBILE NAVIGATION */
+
+        @media (max-width: 768px) {
+
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .site-header nav a {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-    <!-- SNIPCART INSTALL -->
-    <script>
-        window.SnipcartSettings = {
-            publicApiKey: 'YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3'
-        };
+    <!-- =====================================
+         SNIPCART CONTAINER
+    ===================================== -->
 
-        (() => {
-            var c, d;
-            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
-
-            var s, S;
-            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
-
-            var l, p;
-            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
-
-            var w, u;
-            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
-
-            var f =
-                window.SnipcartSettings.version.includes("v3.0.0-ci") ||
-                window.SnipcartSettings.version != "3.0" &&
-                window.SnipcartSettings.version.localeCompare(
-                    "3.4.0",
-                    void 0,
-                    { numeric: !0, sensitivity: "base" }
-                ) === -1;
-
-            var m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
-
-            window.LoadSnipcart = o;
-
-            document.readyState === "loading"
-                ? document.addEventListener("DOMContentLoaded", r)
-                : r();
-
-            function r() {
-                window.SnipcartSettings.loadStrategy
-                    ? window.SnipcartSettings.loadStrategy === "on-user-interaction" &&
-                      (
-                        m.forEach(t => document.addEventListener(t, o)),
-                        setTimeout(o, window.SnipcartSettings.timeoutDuration)
-                      )
-                    : o();
-            }
-
-            var a = !1;
-
-            function o() {
-                if (a) return;
-                a = !0;
-
-                let t = document.getElementsByTagName("head")[0],
-                    e = document.querySelector("#snipcart"),
-                    i = document.querySelector(
-                        `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
-                    ),
-                    n = document.querySelector(
-                        `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
-                    );
-
-                e || (
-                    e = document.createElement("div"),
-                    e.id = "snipcart",
-                    e.setAttribute("hidden", "true"),
-                    document.body.appendChild(e)
-                );
-
-                v(e);
-
-                i || (
-                    i = document.createElement("script"),
-                    i.src =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,
-                    i.async = !0,
-                    t.appendChild(i)
-                );
-
-                n || (
-                    n = document.createElement("link"),
-                    n.rel = "stylesheet",
-                    n.type = "text/css",
-                    n.href =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,
-                    t.prepend(n)
-                );
-
-                m.forEach(g => document.removeEventListener(g, o));
-            }
-
-            function v(t) {
-                !f || (
-                    t.dataset.apiKey = window.SnipcartSettings.publicApiKey
-                );
-            }
-        })();
-    </script>
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
 
 
-    <!-- HEADER -->
+    <!-- =====================================
+         HEADER
+    ===================================== -->
+
     <header class="site-header">
 
         <div class="logo">
+
             <a href="index.html">
-                <img src="images/logo.png" alt="Harreth Outfitters">
+                <img
+                    src="images/logo.png"
+                    alt="HARRETH Outfitters"
+                >
             </a>
+
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
+
             <a href="men.html">MEN</a>
+
             <a href="women.html">WOMEN</a>
+
+            <a href="kids.html">KIDS</a>
+
             <a href="headwear.html">HEADWEAR</a>
-            <a href="gear.html">GEAR</a>
-            <a href="#">ABOUT</a>
+
+            <a href="gear.html" aria-current="page">GEAR</a>
+
+            <a href="about.html">ABOUT</a>
+
         </nav>
 
         <div class="header-actions">
-            <span>SEARCH</span>
-            <span>CART (0)</span>
+
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()"
+            >
+                SEARCH
+            </button>
+
+            <button
+                type="button"
+                class="header-cart snipcart-checkout"
+            >
+                CART
+                (<span class="snipcart-items-count">0</span>)
+            </button>
+
         </div>
 
     </header>
 
 
-    <!-- PRODUCT -->
+    <!-- =====================================
+         MAIN PRODUCT CONTENT
+    ===================================== -->
+
     <main>
 
         <section class="product-page">
 
             <div class="product-page-grid">
 
+                <!-- PRODUCT IMAGE -->
+
                 <div class="product-page-image">
 
                     <img
                         src="images/backpack3.png"
-                        alt="Harreth Rugged Coyote Brown Backpack"
+                        alt="HARRETH Rugged Pack in Coyote Brown"
                     >
 
                 </div>
 
+
+                <!-- PRODUCT INFORMATION -->
 
                 <div class="product-page-info">
 
@@ -172,18 +180,31 @@
                     </p>
 
                     <p class="product-description">
-                        Rugged storage built for work, travel, trails, and wherever the wild
-                        takes you. Designed with a durable outdoor profile and finished with
-                        the Harreth logo patch.
+                        Made for the journey ahead.
+
+                        The HARRETH Rugged Pack brings
+                        outdoor-inspired style to your
+                        everyday adventures.
+
+                        Whether you're heading to work,
+                        packing for a weekend away,
+                        or exploring the outdoors,
+                        this Coyote Brown backpack
+                        features a rugged profile
+                        finished with the HARRETH
+                        logo patch.
+
+                        Live where adventure leads.
                     </p>
 
 
-                    <!-- STYLE -->
+                    <!-- BACKPACK STYLE -->
+
                     <div class="product-option">
 
-                        <label>
-                            STYLE
-                        </label>
+                        <p>
+                            <strong>STYLE</strong>
+                        </p>
 
                         <p>
                             Rugged Outdoor Backpack
@@ -193,20 +214,18 @@
 
 
                     <!-- ADD TO CART -->
+
                     <button
+                        type="button"
+                        id="backpack-add"
                         class="add-cart-btn snipcart-add-item"
 
                         data-item-id="harreth-rugged-pack-coyote"
-
                         data-item-name="Harreth Rugged Pack - Coyote Brown"
-
                         data-item-price="79.99"
-
                         data-item-url="/gear-backpack.html"
-
-                        data-item-image="/images/backpack3.png"
-
-                        data-item-description="Harreth Rugged Pack in Coyote Brown. Rugged storage built for work, travel, trails, and wherever the wild takes you."
+                        data-item-image="https://harrethoutfitters.com/images/backpack3.png"
+                        data-item-description="HARRETH Rugged Pack in Coyote Brown. Outdoor-inspired storage for work, travel, and everyday adventures."
                     >
                         ADD TO CART
                     </button>
@@ -220,18 +239,17 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
+
     <footer>
 
         <div class="footer-brand">
 
-            <h2>
-                HARRETH
-            </h2>
+            <h2>HARRETH</h2>
 
-            <p>
-                BUILT FOR THE WILD.
-            </p>
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
 
         </div>
 
@@ -240,6 +258,22 @@
         </p>
 
     </footer>
+
+
+    <!-- =====================================
+         SCRIPTS
+    ===================================== -->
+
+    <!-- SNIPCART SCRIPT -->
+
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+    <!-- HARRETH SEARCH SCRIPT -->
+
+    <script src="script.js"></script>
 
 </body>
 

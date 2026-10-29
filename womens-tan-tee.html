@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,151 +6,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Harreth Women's Tan Tee | Harreth Outfitters</title>
+    <title>Women's Tan Logo Tee | HARRETH Outfitters</title>
+
+    <meta
+        name="description"
+        content="Shop the HARRETH Women's Tan Logo Tee. Comfortable, outdoor-inspired apparel featuring the HARRETH mountain logo. Live Where Adventure Leads."
+    >
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- SNIPCART STYLES -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
+    >
+
+    <style>
+
+        /* HEADER BUTTONS */
+
+        .header-search,
+        .header-cart {
+            background: transparent;
+            border: none;
+            color: inherit;
+            font: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .header-search:hover,
+        .header-cart:hover {
+            color: #C2A15D;
+        }
+
+        .header-search:focus-visible,
+        .header-cart:focus-visible {
+            outline: 2px solid #C2A15D;
+            outline-offset: 5px;
+        }
+
+        /* MOBILE NAVIGATION */
+
+        @media (max-width: 768px) {
+
+            .site-header nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+
+            .site-header nav a {
+                white-space: nowrap;
+                font-size: 12px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-    <!-- SNIPCART INSTALL -->
-    <script>
-        window.SnipcartSettings = {
-            publicApiKey: 'YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3'
-        };
+    <!-- =====================================
+         SNIPCART CONTAINER
+    ===================================== -->
 
-        (() => {
-            var c, d;
-            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
-
-            var s, S;
-            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
-
-            var l, p;
-            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
-
-            var w, u;
-            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
-
-            var f =
-                window.SnipcartSettings.version.includes("v3.0.0-ci") ||
-                window.SnipcartSettings.version != "3.0" &&
-                window.SnipcartSettings.version.localeCompare(
-                    "3.4.0",
-                    void 0,
-                    { numeric: !0, sensitivity: "base" }
-                ) === -1;
-
-            var m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
-
-            window.LoadSnipcart = o;
-
-            document.readyState === "loading"
-                ? document.addEventListener("DOMContentLoaded", r)
-                : r();
-
-            function r() {
-                window.SnipcartSettings.loadStrategy
-                    ? window.SnipcartSettings.loadStrategy === "on-user-interaction" &&
-                      (
-                        m.forEach(t => document.addEventListener(t, o)),
-                        setTimeout(o, window.SnipcartSettings.timeoutDuration)
-                      )
-                    : o();
-            }
-
-            var a = !1;
-
-            function o() {
-                if (a) return;
-                a = !0;
-
-                let t = document.getElementsByTagName("head")[0],
-                    e = document.querySelector("#snipcart"),
-                    i = document.querySelector(
-                        `script[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`
-                    ),
-                    n = document.querySelector(
-                        `link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`
-                    );
-
-                e || (
-                    e = document.createElement("div"),
-                    e.id = "snipcart",
-                    e.setAttribute("hidden", "true"),
-                    document.body.appendChild(e)
-                );
-
-                v(e);
-
-                i || (
-                    i = document.createElement("script"),
-                    i.src =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,
-                    i.async = !0,
-                    t.appendChild(i)
-                );
-
-                n || (
-                    n = document.createElement("link"),
-                    n.rel = "stylesheet",
-                    n.type = "text/css",
-                    n.href =
-                        `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,
-                    t.prepend(n)
-                );
-
-                m.forEach(g => document.removeEventListener(g, o));
-            }
-
-            function v(t) {
-                !f || (
-                    t.dataset.apiKey = window.SnipcartSettings.publicApiKey
-                );
-            }
-        })();
-    </script>
+    <div
+        hidden
+        id="snipcart"
+        data-api-key="YWJiZDUxYmMtMzdiNS00NTY1LWFiMDYtNjZjY2NhNDY3MTk3NjM5MjIwNTk5NDM5Njg2NjI3">
+    </div>
 
 
-    <!-- HEADER -->
+    <!-- =====================================
+         HEADER
+    ===================================== -->
+
     <header class="site-header">
 
         <div class="logo">
+
             <a href="index.html">
-                <img src="images/logo.png" alt="Harreth Outfitters">
+                <img
+                    src="images/logo.png"
+                    alt="HARRETH Outfitters"
+                >
             </a>
+
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
+
             <a href="men.html">MEN</a>
-            <a href="women.html">WOMEN</a>
+
+            <a href="women.html" aria-current="page">WOMEN</a>
+
+            <a href="kids.html">KIDS</a>
+
             <a href="headwear.html">HEADWEAR</a>
+
             <a href="gear.html">GEAR</a>
-            <a href="#">ABOUT</a>
+
+            <a href="about.html">ABOUT</a>
+
         </nav>
 
         <div class="header-actions">
-            <span>SEARCH</span>
-            <span>CART (0)</span>
+
+            <button
+                type="button"
+                class="header-search"
+                onclick="openHarrethSearch()"
+            >
+                SEARCH
+            </button>
+
+            <button
+                type="button"
+                class="header-cart snipcart-checkout"
+            >
+                CART
+                (<span class="snipcart-items-count">0</span>)
+            </button>
+
         </div>
 
     </header>
 
 
-    <!-- PRODUCT -->
+    <!-- =====================================
+         MAIN PRODUCT CONTENT
+    ===================================== -->
+
     <main>
 
         <section class="product-page">
 
             <div class="product-page-grid">
 
+                <!-- PRODUCT IMAGE -->
+
                 <div class="product-page-image">
+
                     <img
                         src="images/womenstan.png"
-                        alt="Harreth Women's Tan Logo Tee"
+                        alt="HARRETH Women's Tan Logo Tee"
                     >
+
                 </div>
 
+
+                <!-- PRODUCT INFORMATION -->
 
                 <div class="product-page-info">
 
@@ -162,20 +172,29 @@
                     </h1>
 
                     <p class="product-color">
-                        Tan
+                        TAN
                     </p>
 
                     <p class="product-price">
-                        $29.99
+                        $34.99
                     </p>
 
                     <p class="product-description">
-                        Built for long days, weekends outside, and wherever the wild takes you.
-                        A comfortable everyday tee with the Harreth mountain logo across the back.
+                        Made for everyday comfort and
+                        inspired by the outdoors.
+                        Whether you're enjoying a quiet
+                        morning, heading out for the weekend,
+                        or discovering somewhere new,
+                        this comfortable tee features
+                        the HARRETH mountain logo
+                        across the back.
+
+                        Live where adventure leads.
                     </p>
 
 
-                    <!-- SIZE SELECTOR -->
+                    <!-- SIZE SELECTION -->
+
                     <div class="product-option">
 
                         <label for="shirt-size">
@@ -184,29 +203,17 @@
 
                         <select id="shirt-size">
 
-                            <option value="Small">
-                                Small
-                            </option>
+                            <option value="Small">Small</option>
 
-                            <option value="Medium">
-                                Medium
-                            </option>
+                            <option value="Medium">Medium</option>
 
-                            <option value="Large">
-                                Large
-                            </option>
+                            <option value="Large">Large</option>
 
-                            <option value="XL">
-                                XL
-                            </option>
+                            <option value="XL">XL</option>
 
-                            <option value="2XL">
-                                2XL
-                            </option>
+                            <option value="2XL">2XL</option>
 
-                            <option value="3XL">
-                                3XL
-                            </option>
+                            <option value="3XL">3XL</option>
 
                         </select>
 
@@ -214,17 +221,18 @@
 
 
                     <!-- ADD TO CART -->
+
                     <button
+                        type="button"
                         id="womens-tan-tee-add"
                         class="add-cart-btn snipcart-add-item"
 
                         data-item-id="harreth-womens-tan-logo-tee"
                         data-item-name="Harreth Women's Logo Tee - Tan"
-                        data-item-price="29.99"
+                        data-item-price="34.99"
                         data-item-url="/womens-tan-tee.html"
-                        data-item-image="/images/womenstan.png"
-
-                        data-item-description="Harreth women's tan logo tee. Built for long days, weekends outside, and wherever the wild takes you."
+                        data-item-image="https://harrethoutfitters.com/images/womenstan.png"
+                        data-item-description="HARRETH Women's Tan Logo Tee. Comfortable outdoor-inspired apparel featuring the HARRETH mountain logo."
 
                         data-item-custom1-name="Size"
                         data-item-custom1-options="Small|Medium|Large|XL|2XL|3XL"
@@ -242,12 +250,18 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =====================================
+         FOOTER
+    ===================================== -->
+
     <footer>
 
         <div class="footer-brand">
+
             <h2>HARRETH</h2>
-            <p>BUILT FOR THE WILD.</p>
+
+            <p>LIVE WHERE ADVENTURE LEADS.</p>
+
         </div>
 
         <p>
@@ -257,18 +271,38 @@
     </footer>
 
 
-    <!-- SIZE SYNC -->
-    <script>
-        const sizeSelect = document.querySelector('#shirt-size');
-        const addButton = document.querySelector('#womens-tan-tee-add');
+    <!-- =====================================
+         SCRIPTS
+    ===================================== -->
 
-        sizeSelect.addEventListener('change', () => {
+    <!-- SNIPCART SCRIPT -->
+
+    <script
+        async
+        src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js">
+    </script>
+
+
+    <!-- SIZE SELECTOR SCRIPT -->
+
+    <script>
+        const sizeSelect = document.getElementById("shirt-size");
+        const addButton = document.getElementById("womens-tan-tee-add");
+
+        sizeSelect.addEventListener("change", () => {
+
             addButton.setAttribute(
-                'data-item-custom1-value',
+                "data-item-custom1-value",
                 sizeSelect.value
             );
+
         });
     </script>
+
+
+    <!-- HARRETH SEARCH SCRIPT -->
+
+    <script src="script.js"></script>
 
 </body>
 
