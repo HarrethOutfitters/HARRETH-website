@@ -1,9 +1,11 @@
 
-/* =========================================
+/* =====================================================
    HARRETH OUTFITTERS
    COMPLETE MASTER STYLESHEET
-   CHECKOUT REFINEMENT
-   ========================================= */
+
+   Storefront • Collections • Products
+   Cart • Checkout • Shipping • Payment
+   ===================================================== */
 
 /* RESET */
 
@@ -25,16 +27,14 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
-/* COLORS */
 
 :root {
   --black: #0b0b0b;
@@ -48,9 +48,9 @@ a {
   --cream: #e8ddc5;
 }
 
-/* =========================================
+/* =====================================================
    HEADER
-   ========================================= */
+   ===================================================== */
 
 .site-header {
   height: 82px;
@@ -59,7 +59,7 @@ a {
   align-items: center;
   justify-content: space-between;
   background: #050505;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #222222;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -102,13 +102,12 @@ a {
 .site-header .header-cart {
   background: transparent;
   border: none;
+  padding: 0;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  padding: 0;
-  transition: color 0.2s ease;
 }
 
 .site-header .header-search:hover,
@@ -127,9 +126,9 @@ a {
   font: inherit;
 }
 
-/* =========================================
+/* =====================================================
    HOMEPAGE HERO
-   ========================================= */
+   ===================================================== */
 
 .hero {
   min-height: 680px;
@@ -164,7 +163,7 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(50px,7vw,92px);
+  font-size: clamp(50px, 7vw, 92px);
   line-height: 0.95;
   font-weight: 900;
   letter-spacing: -3px;
@@ -240,9 +239,9 @@ a {
   border-color: #f5edde;
 }
 
-/* =========================================
+/* =====================================================
    GENERAL SECTIONS
-   ========================================= */
+   ===================================================== */
 
 section {
   padding: 85px 6%;
@@ -263,16 +262,16 @@ section {
 
 .section-heading h2 {
   color: #ffffff;
-  font-size: clamp(26px,3vw,38px);
+  font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
   line-height: 1;
   text-transform: uppercase;
   margin-top: 5px;
 }
 
-/* =========================================
-   CATEGORIES
-   ========================================= */
+/* =====================================================
+   SHOP HARRETH
+   ===================================================== */
 
 .categories {
   background:
@@ -290,7 +289,7 @@ section {
   max-width: 1500px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -401,7 +400,7 @@ section {
 .categories .section-heading > p::after {
   content: "";
   display: block;
-  width: min(430px,42vw);
+  width: min(430px, 42vw);
   height: 2px;
   background: linear-gradient(
     to right,
@@ -420,9 +419,9 @@ section {
   text-transform: uppercase;
 }
 
-/* =========================================
+/* =====================================================
    BRAND STRIP
-   ========================================= */
+   ===================================================== */
 
 .brand-strip {
   padding: 55px 6%;
@@ -443,9 +442,11 @@ section {
   text-transform: uppercase;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* =====================================================
+   WEBSITE FOOTER
+   ===================================================== */
+
+/* Do not style Snipcart's internal footer. */
 
 body > footer {
   background: #080808;
@@ -472,13 +473,13 @@ body > footer {
 }
 
 body > footer > p {
-  color: #666666;
+  color: #777777;
   font-size: 12px;
 }
 
-/* =========================================
+/* =====================================================
    COLLECTION PAGES
-   ========================================= */
+   ===================================================== */
 
 .mens-hero {
   background: #161616;
@@ -523,7 +524,7 @@ body > footer > p {
   margin-top: 6px;
 }
 
-/* PRODUCT GRID */
+/* COLLECTION GRID */
 
 .product-grid {
   display: grid;
@@ -560,9 +561,9 @@ body > footer > p {
   color: #a9a9a9;
 }
 
-/* =========================================
-   PRODUCT DETAIL
-   ========================================= */
+/* =====================================================
+   PRODUCT DETAIL PAGES
+   ===================================================== */
 
 .product-page {
   min-height: 700px;
@@ -698,17 +699,18 @@ body > footer > p {
   transform: translateY(-2px);
 }
 
-/* =========================================
-   SNIPCART THEME VARIABLES
-   ========================================= */
+/* =====================================================
+   SNIPCART DARK THEME
+   ===================================================== */
 
 #snipcart {
+
   --color-default: #f4f4f4 !important;
-  --color-alt: #c9c9c9 !important;
+  --color-alt: #dedede !important;
   --color-icon: #b7924a !important;
 
   --color-success: #80a77a !important;
-  --color-error: #ee9188 !important;
+  --color-error: #f19a90 !important;
 
   --color-link: #d0aa60 !important;
   --color-link-hover: #efcc8b !important;
@@ -725,10 +727,10 @@ body > footer > p {
   --color-input-hover: #ffffff !important;
   --color-input-focus: #ffffff !important;
   --color-input-checked: #0b0b0b !important;
-  --color-input-disabled: #aaaaaa !important;
-  --color-input-error: #ee9188 !important;
+  --color-input-disabled: #bbbbbb !important;
+  --color-input-error: #f19a90 !important;
 
-  --color-inputLabel: #f4f4f4 !important;
+  --color-inputLabel: #eeeeee !important;
   --color-inputLabel-hover: #ffffff !important;
   --color-inputLabel-focus: #d0aa60 !important;
 
@@ -736,13 +738,13 @@ body > footer > p {
   --color-inputIcon-hover: #d0aa60 !important;
   --color-inputIcon-focus: #d0aa60 !important;
 
-  --color-inputPlaceholder: #bbbbbb !important;
+  --color-inputPlaceholder: #cccccc !important;
 
-  --borderColor-input: #555555 !important;
+  --borderColor-input: #6b6b6b !important;
   --borderColor-input-hover: #b7924a !important;
-  --borderColor-input-focus: #d0aa60 !important;
+  --borderColor-input-focus: #b7924a !important;
 
-  --bgColor-input: #242424 !important;
+  --bgColor-input: #252525 !important;
   --bgColor-input-hover: #292929 !important;
   --bgColor-input-focus: #292929 !important;
   --bgColor-input-checked: #b7924a !important;
@@ -754,13 +756,12 @@ body > footer > p {
   --borderColor-buttonPrimary-hover: #d0aa60 !important;
   --bgColor-buttonPrimary: #b7924a !important;
   --bgColor-buttonPrimary-hover: #d0aa60 !important;
-  --bgColor-buttonPrimary-active: #a7823d !important;
 
   --color-buttonSecondary: #ffffff !important;
   --color-buttonSecondary-hover: #d0aa60 !important;
   --borderColor-buttonSecondary: #b7924a !important;
   --borderColor-buttonSecondary-hover: #d0aa60 !important;
-  --bgColor-buttonSecondary: #202020 !important;
+  --bgColor-buttonSecondary: #222222 !important;
   --bgColor-buttonSecondary-hover: #303030 !important;
 
   --color-buttonDanger: #e99a91 !important;
@@ -783,11 +784,32 @@ body > footer > p {
 
   --bgColor-modal: #0b0b0b !important;
   --bgColor-modalVeil: #0b0b0b !important;
+
+  /* DISABLE ALL SNIPCART THEME SHADOWS */
+
+  --shadow-default: none !important;
+  --shadow-tooltip: none !important;
+  --shadow-link-focus: none !important;
+  --shadow-input-hover: none !important;
+  --shadow-input-focus: none !important;
+  --shadow-input-checked: none !important;
+
+  --shadow-buttonPrimary-hover: none !important;
+  --shadow-buttonPrimary-active: none !important;
+  --shadow-buttonPrimary-focus: none !important;
+
+  --shadow-buttonSecondary-hover: none !important;
+  --shadow-buttonSecondary-active: none !important;
+  --shadow-buttonSecondary-focus: none !important;
+
+  --shadow-buttonDanger-hover: none !important;
+  --shadow-buttonDanger-active: none !important;
+  --shadow-buttonDanger-focus: none !important;
 }
 
-/* =========================================
-   SNIPCART OUTER BACKGROUND
-   ========================================= */
+/* =====================================================
+   SNIPCART BACKGROUND
+   ===================================================== */
 
 #snipcart .snipcart-modal,
 #snipcart .snipcart-modal__container,
@@ -810,73 +832,77 @@ body > footer > p {
 #snipcart .snipcart-cart__content,
 #snipcart .snipcart-empty-cart {
   background-color: #0b0b0b !important;
-
   background-image:
     linear-gradient(
       rgba(8,8,8,0.84),
       rgba(8,8,8,0.84)
     ),
     url("images/topo-lines.png") !important;
-
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
 
-/* =========================================
-   CHECKOUT PANELS — NO GLOW
-   ========================================= */
+/* =====================================================
+   CHECKOUT PANELS — ZERO GLOW
+   ===================================================== */
 
 /*
-   Remove the bright white outlines and
-   glowing shadows around checkout boxes.
-*/
-
-#snipcart .snipcart-checkout .snipcart__box,
-#snipcart .snipcart-checkout .snipcart__box--header,
-#snipcart .snipcart-checkout .snipcart__box--content,
-#snipcart .snipcart-checkout .snipcart__box--footer,
-#snipcart .snipcart-checkout .snipcart-checkout-step,
-#snipcart .snipcart-checkout .snipcart-checkout-step__content,
-#snipcart .snipcart-checkout .snipcart-billing-completed,
-#snipcart .snipcart-checkout .snipcart-shipping-completed,
-#snipcart .snipcart-checkout .snipcart-form__set,
-#snipcart .snipcart-checkout .snipcart-form__footer {
-  background-color: #191919 !important;
-  color: #f4f4f4 !important;
-  border-color: #303030 !important;
-  box-shadow: none !important;
-  filter: none !important;
-}
-
-/*
-   Some Snipcart builds put shadows on
-   the outer step container instead.
+   These styles target Snipcart's actual
+   billing, shipping and payment containers.
 */
 
 #snipcart .snipcart__box,
 #snipcart .snipcart-checkout-step,
 #snipcart .snipcart-checkout-step__container,
+#snipcart .snipcart-checkout-step__content,
 #snipcart .snipcart-checkout__content,
 #snipcart .snipcart-layout__col,
-#snipcart .snipcart-layout__cols {
+#snipcart .snipcart-layout__cols,
+#snipcart .snipcart-billing-completed,
+#snipcart .snipcart-shipping-completed,
+#snipcart .snipcart-payment,
+#snipcart .snipcart-form,
+#snipcart .snipcart-form__footer,
+#snipcart .snipcart-form__set {
   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
   filter: none !important;
+  backdrop-filter: none !important;
 }
 
-/* No artificial glow from pseudo elements */
+#snipcart .snipcart__box,
+#snipcart .snipcart-checkout-step,
+#snipcart .snipcart-billing-completed,
+#snipcart .snipcart-shipping-completed,
+#snipcart .snipcart-payment {
+  background: #191919 !important;
+  border: 1px solid #292929 !important;
+  border-radius: 0 !important;
+}
 
-#snipcart .snipcart-checkout-step::before,
-#snipcart .snipcart-checkout-step::after,
+/* Flat headers and footers */
+
+#snipcart .snipcart__box--header,
+#snipcart .snipcart__box--content,
+#snipcart .snipcart__box--footer,
+#snipcart .snipcart-checkout-step__content {
+  background-color: #191919 !important;
+  box-shadow: none !important;
+  border-color: #303030 !important;
+}
+
 #snipcart .snipcart__box::before,
-#snipcart .snipcart__box::after {
+#snipcart .snipcart__box::after,
+#snipcart .snipcart-checkout-step::before,
+#snipcart .snipcart-checkout-step::after {
   box-shadow: none !important;
   filter: none !important;
 }
 
-/* =========================================
-   CHECKOUT TEXT
-   ========================================= */
+/* =====================================================
+   CHECKOUT TEXT CONTRAST
+   ===================================================== */
 
 #snipcart h1,
 #snipcart h2,
@@ -887,26 +913,64 @@ body > footer > p {
 #snipcart .snipcart__font--subtitle,
 #snipcart .snipcart__font--bold {
   color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 #snipcart .snipcart__font--secondary,
 #snipcart .snipcart__font--tiny,
 #snipcart .snipcart__font--slim {
-  color: #d0d0d0 !important;
+  color: #d6d6d6 !important;
+  opacity: 1 !important;
 }
 
 #snipcart .snipcart-form__label,
 #snipcart .snipcart-input__label,
 #snipcart .snipcart-checkbox__label,
-#snipcart .snipcart-form__field label,
-#snipcart .snipcart-checkout-step__title {
-  color: #f4f4f4 !important;
+#snipcart .snipcart-form__field label {
+  color: #f0f0f0 !important;
   opacity: 1 !important;
 }
 
-/* =========================================
+/* COMPLETED BILLING / SHIPPING */
+
+#snipcart .snipcart-billing-completed,
+#snipcart .snipcart-shipping-completed {
+  color: #ededed !important;
+}
+
+#snipcart .snipcart-billing-completed__information,
+#snipcart .snipcart-shipping-completed__information,
+#snipcart .snipcart-checkout-step__title,
+#snipcart .snipcart-checkout-step__cols,
+#snipcart .snipcart-checkout-step__cols span,
+#snipcart .snipcart__address__display,
+#snipcart .snipcart__address__display span {
+  color: #e5e5e5 !important;
+  opacity: 1 !important;
+}
+
+#snipcart .snipcart-billing-completed__title,
+#snipcart .snipcart-shipping-completed__title,
+#snipcart .snipcart-payment__header {
+  color: #ffffff !important;
+}
+
+/* PAYMENT STEP TEXT */
+
+#snipcart .snipcart-payment,
+#snipcart .snipcart-payment p,
+#snipcart .snipcart-payment label,
+#snipcart .snipcart-payment__content,
+#snipcart .snipcart-payment__content p,
+#snipcart .snipcart-payment__content span,
+#snipcart .snipcart-payment-info {
+  color: #e1e1e1 !important;
+  opacity: 1 !important;
+}
+
+/* =====================================================
    CHECKOUT INPUTS
-   ========================================= */
+   ===================================================== */
 
 #snipcart input:not([type="checkbox"]):not([type="radio"]),
 #snipcart select,
@@ -915,7 +979,7 @@ body > footer > p {
 #snipcart .snipcart-typeahead__input {
   background-color: #262626 !important;
   color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff;
+  -webkit-text-fill-color: #ffffff !important;
   border: 1px solid #626262 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -933,15 +997,11 @@ body > footer > p {
 #snipcart textarea:focus {
   background-color: #292929 !important;
   color: #ffffff !important;
-  border-color: #b7924a !important;
-
-  /* Thin gold outline instead of glow */
+  border: 1px solid #b7924a !important;
   outline: 1px solid #b7924a !important;
   outline-offset: 0 !important;
   box-shadow: none !important;
 }
-
-/* Browser autofill */
 
 #snipcart input:-webkit-autofill {
   -webkit-text-fill-color: #ffffff !important;
@@ -955,124 +1015,184 @@ body > footer > p {
   accent-color: #b7924a;
 }
 
-/* =========================================
-   ADDRESS AUTOCOMPLETE
-   ========================================= */
+/* =====================================================
+   COUNTRY / STATE SELECTS
+   ===================================================== */
 
 /*
-   Google address suggestions are often
-   inserted outside the Snipcart container.
+   Force Snipcart's visible country and
+   state selection controls to charcoal.
+*/
 
-   Use readable dark text on the provider's
-   light dropdown rather than white text.
+#snipcart select,
+#snipcart .snipcart-form__select,
+#snipcart .snipcart-form__select select,
+#snipcart .snipcart-select,
+#snipcart .snipcart-select select,
+#snipcart .snipcart-dropdown,
+#snipcart .snipcart-dropdown select {
+  background-color: #252525 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #555555 !important;
+  box-shadow: none !important;
+  color-scheme: dark;
+}
+
+#snipcart select option {
+  background-color: #252525;
+  color: #ffffff;
+}
+
+#snipcart .snipcart-form__select *,
+#snipcart .snipcart-select *,
+#snipcart .snipcart-dropdown * {
+  color: #ffffff;
+}
+
+/* =====================================================
+   GOOGLE ADDRESS AUTOCOMPLETE
+   ===================================================== */
+
+/*
+   Google suggestions use a light background.
+   Their text must be DARK, not pale blue.
 */
 
 .pac-container {
   background: #ffffff !important;
-  border: 1px solid #c8c8c8 !important;
+  border: 1px solid #bdbdbd !important;
   border-radius: 0 !important;
-  box-shadow: 0 5px 14px rgba(0,0,0,0.2) !important;
+  box-shadow: none !important;
   z-index: 999999 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
 }
 
-.pac-container .pac-item,
-.pac-container .pac-item-query,
-.pac-container .pac-matched {
-  color: #202020 !important;
-  -webkit-text-fill-color: #202020 !important;
+.pac-item {
+  background: #ffffff !important;
+  border-top: 1px solid #dddddd !important;
+  padding: 9px 12px !important;
+  color: #333333 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  cursor: pointer;
   opacity: 1 !important;
 }
 
-.pac-container .pac-item {
-  padding: 7px 10px !important;
-  border-top: 1px solid #e4e4e4 !important;
+.pac-item-query,
+.pac-item-query .pac-matched,
+.pac-item .pac-matched,
+.pac-item span:not(.pac-icon) {
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+  opacity: 1 !important;
 }
 
-.pac-container .pac-item:hover,
-.pac-container .pac-item-selected {
-  background: #eee7d8 !important;
+.pac-item:hover,
+.pac-item-selected {
+  background: #f0e8d9 !important;
 }
 
-/* =========================================
-   SHIPPING OPTION — READABLE
-   ========================================= */
+.pac-item:hover .pac-item-query,
+.pac-item-selected .pac-item-query {
+  color: #111111 !important;
+}
+
+/* =====================================================
+   ADDRESS AUTOCOMPLETE INSIDE SNIPCART
+   ===================================================== */
 
 /*
-   Specifically fix the nearly white
-   shipping selection box from your photo.
+   Snipcart may also use its own typeahead
+   dropdown instead of Google's pac-container.
 */
+
+#snipcart .snipcart-typeahead,
+#snipcart .snipcart-typeahead__suggestions,
+#snipcart .snipcart-typeahead__list,
+#snipcart .snipcart-typeahead__results {
+  background: #252525 !important;
+  color: #ffffff !important;
+  border-color: #555555 !important;
+  box-shadow: none !important;
+}
+
+#snipcart .snipcart-typeahead__item,
+#snipcart .snipcart-typeahead__suggestion,
+#snipcart .snipcart-typeahead li {
+  background: #252525 !important;
+  color: #eeeeee !important;
+  opacity: 1 !important;
+}
+
+#snipcart .snipcart-typeahead__item:hover,
+#snipcart .snipcart-typeahead__suggestion:hover,
+#snipcart .snipcart-typeahead li:hover {
+  background: #363128 !important;
+  color: #ffffff !important;
+}
+
+/* =====================================================
+   SHIPPING METHOD
+   ===================================================== */
 
 #snipcart .snipcart-shipping-rates-list,
 #snipcart .snipcart-shipping-rates-list-item,
 #snipcart .snipcart-shipping-rates-list-item--selected,
 #snipcart .snipcart-shipping-rate,
 #snipcart .snipcart-shipping-rate--selected,
-#snipcart .snipcart-shipping-method,
-#snipcart .snipcart-shipping-method--selected {
-  background-color: #252525 !important;
+#snipcart .snipcart-shipping-method {
+  background: #252525 !important;
   color: #ffffff !important;
   border-color: #b7924a !important;
   box-shadow: none !important;
 }
 
-#snipcart .snipcart-shipping-rates-list-item label,
-#snipcart .snipcart-shipping-rates-list-item span,
-#snipcart .snipcart-shipping-rates-list-item p,
-#snipcart .snipcart-shipping-rates-list-item__label,
-#snipcart .snipcart-shipping-rates-list-item__price,
-#snipcart .snipcart-shipping-rate label,
-#snipcart .snipcart-shipping-rate span,
-#snipcart .snipcart-shipping-method label,
-#snipcart .snipcart-shipping-method span {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-  opacity: 1 !important;
-}
-
-/* Alternative selectable shipping card markup */
-
-#snipcart .snipcart-shipping-rates-list-item,
 #snipcart .snipcart-shipping-rates-list-item *,
-#snipcart .snipcart-shipping-rate,
-#snipcart .snipcart-shipping-rate * {
+#snipcart .snipcart-shipping-rate *,
+#snipcart .snipcart-shipping-method * {
+  color: #ffffff !important;
+  opacity: 1 !important;
   text-shadow: none !important;
 }
 
-/* =========================================
-   CHECKOUT STEP BADGES
-   ========================================= */
-
-#snipcart .snipcart__box--badge,
-#snipcart .snipcart__box--badge-highlight {
-  background-color: #b7924a !important;
-  color: #0b0b0b !important;
-  border-color: #b7924a !important;
-  box-shadow: none !important;
-}
-
-/* =========================================
+/* =====================================================
    ORDER SUMMARY
-   ========================================= */
+   ===================================================== */
 
 #snipcart .snipcart-cart-summary,
 #snipcart .snipcart-cart-summary__content,
 #snipcart .snipcart-cart-summary__header,
-#snipcart .snipcart-checkout-step__summary {
-  background-color: #171717 !important;
-  color: #f4f4f4 !important;
+#snipcart .snipcart-cart-summary__footer,
+#snipcart .snipcart-cart-summary__totals {
+  background: #171717 !important;
+  color: #ffffff !important;
   border-color: #303030 !important;
   box-shadow: none !important;
 }
 
-#snipcart .snipcart-cart-summary__title,
-#snipcart .snipcart-cart-summary__content h2,
-#snipcart .snipcart-cart-summary__content h3 {
+/* Summary header */
+
+#snipcart .snipcart-cart-summary__title {
   color: #ffffff !important;
+  font-weight: 800 !important;
 }
 
-#snipcart .snipcart-cart-summary .snipcart__font--secondary,
-#snipcart .snipcart-cart-summary .snipcart__font--tiny {
-  color: #c8c8c8 !important;
+/* Summary item details */
+
+#snipcart .snipcart-cart-summary__items,
+#snipcart .snipcart-cart-summary__items *,
+#snipcart .snipcart-cart-summary__content p,
+#snipcart .snipcart-cart-summary__content span {
+  color: #dddddd !important;
+  opacity: 1 !important;
+}
+
+/* TOTAL AMOUNTS */
+
+#snipcart .snipcart-summary-fees__amount,
+#snipcart .snipcart-cart-summary-fees__amount {
+  color: #ffffff !important;
 }
 
 #snipcart .snipcart-cart-summary-fees__total {
@@ -1080,20 +1200,51 @@ body > footer > p {
   font-weight: 900 !important;
 }
 
-#snipcart .snipcart-item-line__price,
-#snipcart .snipcart-summary-fees__amount,
-#snipcart .snipcart-cart-summary-fees__amount {
-  color: #ffffff !important;
+/* SHIPPING AND TAXES MESSAGE */
+
+/*
+   Align the notice in its own row.
+   Use readable gold instead of dark gray.
+*/
+
+#snipcart .snipcart-cart-summary__content
+.snipcart__font--tiny,
+#snipcart .snipcart-cart-summary__content
+.snipcart__font--secondary,
+#snipcart .snipcart-cart-summary__footer
+.snipcart__font--tiny {
+  color: #d0aa60 !important;
+  opacity: 1 !important;
 }
 
-/* =========================================
-   SNIPCART CART PANELS
-   ========================================= */
+/* Common Snipcart summary notice containers */
+
+#snipcart .snipcart-cart-summary__totals p,
+#snipcart .snipcart-cart-summary__totals small,
+#snipcart .snipcart-cart-summary__footer p,
+#snipcart .snipcart-cart-summary__footer small {
+  max-width: 100% !important;
+  overflow-wrap: anywhere !important;
+  white-space: normal !important;
+  line-height: 1.55 !important;
+}
+
+/* No clipping or accidental overlap */
+
+#snipcart .snipcart-cart-summary__totals,
+#snipcart .snipcart-cart-summary__footer {
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+/* =====================================================
+   CART ITEM PANELS
+   ===================================================== */
 
 #snipcart .snipcart-item-line,
 #snipcart .snipcart-payment-methods__container,
 #snipcart .snipcart-order__details {
-  background-color: #171717 !important;
+  background: #171717 !important;
   border-color: #303030 !important;
   color: #f4f4f4 !important;
   box-shadow: none !important;
@@ -1108,9 +1259,9 @@ body > footer > p {
   color: #d0aa60 !important;
 }
 
-/* =========================================
-   BUTTONS
-   ========================================= */
+/* =====================================================
+   CHECKOUT BUTTONS
+   ===================================================== */
 
 #snipcart .snipcart-base-button.is-primary,
 #snipcart .snipcart-button-primary,
@@ -1135,7 +1286,7 @@ body > footer > p {
 }
 
 #snipcart .snipcart-button-secondary {
-  background: #202020 !important;
+  background: #222222 !important;
   color: #ffffff !important;
   border: 1px solid #b7924a !important;
   border-radius: 0 !important;
@@ -1147,9 +1298,9 @@ body > footer > p {
   color: #d0aa60 !important;
 }
 
-/* =========================================
-   EMPTY CART BUTTON
-   ========================================= */
+/* =====================================================
+   EMPTY CART
+   ===================================================== */
 
 #snipcart .snipcart-empty-cart {
   min-height: 70vh;
@@ -1180,9 +1331,9 @@ body > footer > p {
   color: #0b0b0b !important;
 }
 
-/* =========================================
-   LINKS AND ICONS
-   ========================================= */
+/* =====================================================
+   SNIPCART LINKS AND ICONS
+   ===================================================== */
 
 #snipcart a {
   color: #d0aa60 !important;
@@ -1201,9 +1352,9 @@ body > footer > p {
   color: #b7924a !important;
 }
 
-/* =========================================
+/* =====================================================
    CART ITEM LAYOUT
-   ========================================= */
+   ===================================================== */
 
 #snipcart .snipcart-item-line {
   padding: 14px 18px !important;
@@ -1269,9 +1420,9 @@ body > footer > p {
   margin-top: 8px !important;
 }
 
-/* =========================================
-   CART QUANTITY CONTROLS
-   ========================================= */
+/* =====================================================
+   QUANTITY CONTROL
+   ===================================================== */
 
 #snipcart .snipcart-item-quantity__quantity {
   display: inline-flex !important;
@@ -1375,11 +1526,12 @@ body > footer > p {
   border-color: #444444 !important;
 }
 
-/* =========================================
+/* =====================================================
    TABLET
-   ========================================= */
+   ===================================================== */
 
 @media (max-width:1000px) {
+
   .site-header {
     padding: 0 20px;
   }
@@ -1393,9 +1545,9 @@ body > footer > p {
   }
 }
 
-/* =========================================
-   PHONES
-   ========================================= */
+/* =====================================================
+   PHONE
+   ===================================================== */
 
 @media (max-width:700px) {
 
@@ -1530,9 +1682,9 @@ body > footer > p {
   }
 }
 
-/* =========================================
-   PRODUCT PAGES ON SMALL SCREENS
-   ========================================= */
+/* =====================================================
+   PRODUCT PAGES — SMALL SCREENS
+   ===================================================== */
 
 @media (max-width:800px) {
 
@@ -1584,39 +1736,6 @@ body > footer > p {
   }
 }
 
-/* =========================================
-   FINAL CHECKOUT OVERRIDES
-   ========================================= */
-
-/* Remove remaining box glow */
-
-#snipcart .snipcart__box,
-#snipcart .snipcart-checkout-step,
-#snipcart .snipcart-checkout-step__container,
-#snipcart .snipcart-checkout-step__content {
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  filter: none !important;
-}
-
-/* Keep step panels dark */
-
-#snipcart .snipcart__box,
-#snipcart .snipcart__box--header,
-#snipcart .snipcart-checkout-step {
-  background-color: #191919 !important;
-  border-color: #303030 !important;
-}
-
-/* Keep quantity center dark */
-
-#snipcart .snipcart-item-quantity__quantity input {
-  background-color: #242824 !important;
-  border: none !important;
-  width: 58px !important;
-  height: 27px !important;
-}
-
-/* =========================================
+/* =====================================================
    END OF HARRETH MASTER STYLESHEET
-   ========================================= */
+   ===================================================== */
